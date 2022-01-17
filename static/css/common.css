@@ -1,14 +1,11 @@
-@font-face {
-  font-family: 'Georgia';
-  font-display: fallback;
-  src: url('../font/Georgia.ttf');
-}
+
 
 @font-face {
   font-family: 'Huakang';
   font-display: fallback;
   src: url('../font/Huakang.TTC');
 }
+
 
 html {
   word-break: keep-all;
@@ -22,7 +19,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 500ms ease;
-  font-family: Georgia, Huakang, 'PingFang SC','Microsoft YaHei',  'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: 'Georgia', Huakang, 'Microsoft YaHei','PingFang SC',  'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
 }
 body {
   max-width: 680px;
