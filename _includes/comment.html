@@ -1,0 +1,22 @@
+<!-- Valine -->
+{% if site.valine.enable %}
+<hr style="visibility: hidden;">
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+<script src="{{site.valine.js}}"></script>
+<div id="vcomments"></div>
+<script>
+	new Valine({
+		el: '#vcomments',
+		lang: 'en',
+		serverURLs: '{{site.valine.serverURLs}}',
+		appId: '{{site.valine.id}}',
+		appKey: '{{site.valine.key}}',
+		placeholder: '{{site.valine.placeholder}}',
+		avatar: '{{site.valine.avatar}}',
+		visitor: '{{site.valine.visitor}}',
+		master: '{{site.valine.master}}',
+		requiredFields: ['mail'],
+		enableQQ: '{{site.valine.enableQQ}}'
+	});
+</script>
+{% endif %}

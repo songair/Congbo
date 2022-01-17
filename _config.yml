@@ -1,0 +1,75 @@
+encoding: utf-8
+
+# SEO相关信息
+title: Congbo Song
+description: Congbo's Blog
+keywords: Congbo Song, Congbo, Atmospheric, Clean air, Air pollution, Machine learning, intervention
+author: Congbo Song
+footerText: '© Congbo Song 2022'
+
+# 这些不要动
+permalink: /posts/:year/:month/:day/:title.html
+redcarpet:
+  auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
+  extensions: ["tables", "with_toc_data"]
+highlighter: pygments
+exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock', 'blog.sh']
+
+# 域名配置
+# baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
+domainUrl: 'https://congbo.site'
+baseurl: ''
+
+# 吐个槽地址，会在chat页面中重定向到该地址
+#tucaoUrl: 
+
+# 菜单
+# 必填字段 title: '文本' url: '链接'
+# 可选字段 target: '_blank' 新页面打开 
+menu:
+  - title: Blog
+    url: /
+  - title: Tags
+    url: /pages/tags.html
+  - title: Search
+    url: /pages/search.html
+  - title: Publications
+    url: /pages/publications.html
+  - title: CV
+    url: /pages/cv.html
+  - title: Contact
+    url: /pages/contact.html
+
+# 点击页面文字冒出特效,不需要请设置为false
+extClickEffect: false
+
+# Google Adsense,不需要请设置为false
+# _includes/ext-adsense.html 里面修改为自己的配置
+extAdsense: false
+
+# 数学公式支持，比较影响加载速度,不需要请设置为false
+extMath: true
+
+valine:
+  serverURLs: https://xrrro58n.api.lncldglobal.com
+  enable: true    #是否开启valine评论
+  id: xrRRo58nrl4YV9rUeNOePKr9-MdYXbMMI
+  key: 90tIVi6XRevzSAzvojiOKwlR
+  js: /static/js/Valine.min.js
+  placeholder: Comment here
+  avatar: mp
+  visitor: true
+  master: 0e69d32e634f694435ffb3907091d2bf
+  requiredFields: ['mail']
+  pageSize: 10
+  mathJax: false
+  enableQQ: true
+
+
+links:
+  - title: TMaize的个人博客
+    url: https://blog.tmaize.net
+  - title: tuanvvu
+    url: https://tuanvvu.github.io
