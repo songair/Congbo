@@ -59,7 +59,7 @@ valine:
   placeholder: Comment here
   avatar: mp
   visitor: true
-  master: 0e69d32e634f694435ffb3907091d2bf
+  master: b8d6b6976b3ec45bccc6aa9816c40db7
   requiredFields: ['mail']
   pageSize: 10
   mathJax: false
