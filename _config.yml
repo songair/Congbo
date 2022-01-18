@@ -9,12 +9,10 @@ footerText: '© Congbo Song 2022'
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
-redcarpet:
+kramdown:
   auto_ids: true
   input: GFM
   syntax_highlighter: rouge
-  extensions: ["tables", "with_toc_data"]
-highlighter: pygments
 exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock', 'blog.sh']
 
 # 域名配置
