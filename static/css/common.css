@@ -203,5 +203,5 @@ input:-webkit-autofill {
 
 /* target right (odd-numbered) pages only */
 @page :right {
-  margin-left: 2cm;
+  margin-left: 6cm;
 }
