@@ -188,6 +188,7 @@ input:-webkit-autofill {
 
 @media print{
   body{ background-color:#FFFFFF; background-image:none; color:#000000;transform: scale(.8);}
+  @page {margin-top: 1.2 cm;margin-bottom: 1.2 cm; margin-left: 1.2 cm;margin-right: 5 cm;}
   header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower { display:none;}
   #leftbar{ display:none;}
   /* print.css */
@@ -196,11 +197,4 @@ input:-webkit-autofill {
   img.dark {filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);}
 }
 
-@page {
-  margin-top: 1.2cm;
-}
 
-@page  {
-         margin-left: 1.2 cm;
-         margin-right: 5 cm;
-      }
