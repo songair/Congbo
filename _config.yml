@@ -26,8 +26,6 @@ sourcecode: "https://github.com/songair/congbo"
 # 菜单
 # 必填字段 title: '文本' url: '链接'
 # 可选字段 target: '_blank' 新页面打开 
-gems:
-  - jekyll-pdf
 
 menu:
   - title: Blog
