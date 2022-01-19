@@ -119,7 +119,7 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 3. Ultrapure water generation system
 4. CEAS requires a separate inlet, the inlet tube is preferably not more than 1.5m; the instrument is operated with the lid open and the temperature should not be too high
 
-# Tools:
+# Tools
 1. Electronic balances
 2. Gas flow calibrator
 3. Needle filter + sampling filter membrane, qty 3-5? Needle filters and sampling filter membranes need to be determined according to local contamination conditions, 3-5 less.
