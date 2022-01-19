@@ -196,6 +196,10 @@ input:-webkit-autofill {
   img.dark {filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);}
 }
 
+@page {
+  margin-top: 1.2cm;
+}
+
 @page  {
          margin-left: 1.2 cm;
          margin-right: 5 cm;
