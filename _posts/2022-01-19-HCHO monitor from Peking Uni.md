@@ -102,7 +102,7 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 4. Acetylacetone (assay pure, protected from light) 10 mL / time * 5 times = 50 ml, We are using TCI
 5. 10.3mg/L HCHO formaldehyde stock solution/standard solution 1ml/time, the standard solution bottle in the following figure is 2ml bottle, which can only be used once after disassembly, that is, 5 bottles of standard formaldehyde solution are required.
 6. 1mol/L potassium hydroxide: wash, 10-40ml (using a syringe)
-7. Alcohol (formaldehyde meter, CEAS, turbidity meter cleaning needs, 1-2 bottles are enough)
+7. Alcohol (formaldehyde monitor, CEAS, turbidity meter cleaning needs, 1-2 bottles are enough)
 
 # Gas
 1. nitrogen:
@@ -131,22 +131,22 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 
 # Consumables
 
- | name | use | Specification | quantity | Remark |
+ | Item | Function | Specification | quantity | Remark |
 |---|---|---|---|---|
 | Pipette or pipette | Prepare the solution | 200μl、1ml、5ml | 3 | Each 1 |
 | Prown volumetric flask | Prepare the solution | Brown 100mL | 8 |   |
 | Barometer | Calibration gas flow | 0—10L/min | 1 |   |
 | Beaker (plastic) | Preparation of solutions, routine maintenance | 50ml、100ml、200ml | 2 |   |
 | Electronic balance | Placement solution | 1 unit, 1-500g | 1 |   |
-| Syringe | daily maintenance, cleaning | 5mL、20ml | some |   |
+| Syringe | Daily maintenance, cleaning | 5mL、20ml | Some |   |
 | Medicine spoon | Solution preparation | Large 20cm | 2 |   |
-| Parafilm | Seal bottle mouth, tube mouth, etc. |   | some |   |
-| Aluminum foil | seal |   | some |   |
-| Power free gloves/mask/alcohol/ | protection |   | some |   |
+| Parafilm | Seal bottle mouth, tube mouth, etc. |   | Some |   |
+| Aluminum foil | Seal |   | some |   |
+| Power free gloves/mask/alcohol/ | Protection |   | Some |   |
 					
 
 # Power consumption
-Formaldehyde monitor: <br>
+Formaldehyde monitor (CEAS): <br>
 Power supply: power supply: 220VAC <br>
 Weight: 10kg (excluding agents) <br>
 Size: 550mm * 430mm * 280mm
