@@ -188,7 +188,7 @@ input:-webkit-autofill {
 
 @media print{
   body{ background-color:#FFFFFF; background-image:none; color:#000000;transform: scale(.8);}
-  @page {margin-top: 1.2 cm;margin-bottom: 1.2 cm; margin-left: 1.2 cm;margin-right: 5 cm;}
+  @page {size: auto;margin: 10%;}
   header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower { display:none;}
   #leftbar{ display:none;}
   /* print.css */
