@@ -191,7 +191,7 @@ input:-webkit-autofill {
   @page {size: A3;margin-right: 1cm;}
   @page :left {margin-left: 8cm;}
   @page :right {margin-left: 8cm;}
-  header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower { display:none;}
+  header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower, .vempty { display:none;}
   #leftbar{ display:none;}
   /* print.css */
   table, img, svg {break-inside: avoid;}
