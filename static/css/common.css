@@ -185,3 +185,13 @@ input:-webkit-autofill {
     font-size: 15px;
   }
 }
+
+@media print{
+  body{ background-color:#FFFFFF; background-image:none; color:#000000 }
+  header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower { display:none;}
+  #leftbar{ display:none;}
+  /* print.css */
+  table, img, svg {break-inside: avoid;}
+  #contentarea{ width:100%;}
+  img.dark {filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);}
+}
