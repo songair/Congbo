@@ -198,10 +198,10 @@ input:-webkit-autofill {
 
 /* target left (even-numbered) pages only */
 @page :left {
-  margin-right: 2cm;
+  margin-right: 5cm;
 }
 
 /* target right (odd-numbered) pages only */
 @page :right {
-  margin-left: 6cm;
+  margin-left: 2cm;
 }
