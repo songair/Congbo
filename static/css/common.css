@@ -198,7 +198,7 @@ input:-webkit-autofill {
 
 /* target left (even-numbered) pages only */
 @page :left {
-  margin-right: 5cm;
+  margin-right: 6cm;
 }
 
 /* target right (odd-numbered) pages only */
