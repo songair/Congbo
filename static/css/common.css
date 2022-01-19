@@ -195,3 +195,13 @@ input:-webkit-autofill {
   #contentarea{ width:100%;}
   img.dark {filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);}
 }
+
+/* target left (even-numbered) pages only */
+@page :left {
+  margin-right: 2cm;
+}
+
+/* target right (odd-numbered) pages only */
+@page :right {
+  margin-left: 6cm;
+}
