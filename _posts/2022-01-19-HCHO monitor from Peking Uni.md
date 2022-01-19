@@ -131,7 +131,7 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 
 # Consumables
 
- | Item | Function | Specification | quantity | Remark |
+ | Item | Function | Specification | Qty | Note |
 |---|---|---|---|---|
 | Pipette or pipette | Prepare the solution | 200μl、1ml、5ml | 3 | Each 1 |
 | Prown volumetric flask | Prepare the solution | Brown 100mL | 8 |   |
