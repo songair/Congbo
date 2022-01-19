@@ -416,16 +416,3 @@ blog.addLoadEvent(function () {
     sessionStorage.darkTheme = blog.darkTheme
   })
 })
-
-function setupBackToTop() {
-
-    if (GetQueryValue("print")) {
-        return;
-    }
-
-    addBackToTop({
-        diameter: 40,
-        backgroundColor: '#ddd',
-        textColor: 'red'
-    });
-}
