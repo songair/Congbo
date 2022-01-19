@@ -141,8 +141,8 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 | syringe | daily maintenance, cleaning | 5mL、20ml | some |   |
 | medicine spoon | Solution preparation | Large 20cm | 2 |   |
 | Parafilm | Seal bottle mouth, tube mouth, etc. |   | some |   |
-| aluminum foil | seal |   | some |   |
-| Dust free gloves/mask/alcohol/ | protection |   | some |   |
+| Aluminum foil | seal |   | some |   |
+| Power free gloves/mask/alcohol/ | protection |   | some |   |
 					
 
 # Power consumption
