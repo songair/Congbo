@@ -35,7 +35,7 @@ comments: true
 
 1. 氮气：
 
-    甲醛仪：1L/min，每日走30-40分钟空白，共需要<span style="color:red;">**2000L**</span>（按采样50天，一天走40分钟空白计算）。<br>
+    甲醛仪：1L/min，每日走30-40分钟空白，共需要**2000L**（按采样50天，一天走40分钟空白计算）。<br>
     CEAS：200ml/min，共需要14400L（按采样50天计算）如**40L**一瓶则需要**5**瓶，CEAS的氮气用量比较大，能否用液氮供氮气。
 
 2. 氦气：4L
@@ -133,13 +133,13 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 
  | name | use | Specification | quantity | Remark |
 |---|---|---|---|---|
-| pipette or pipette | Prepare the solution | 200μl、1ml、5ml | 3 | Each 1 |
-| brown volumetric flask | Prepare the solution | Brown 100mL | 8 |   |
+| Pipette or pipette | Prepare the solution | 200μl、1ml、5ml | 3 | Each 1 |
+| Prown volumetric flask | Prepare the solution | Brown 100mL | 8 |   |
 | Barometer | Calibration gas flow | 0—10L/min | 1 |   |
-| beaker (plastic) | Preparation of solutions, routine maintenance | 50ml、100ml、200ml | 2 |   |
+| Beaker (plastic) | Preparation of solutions, routine maintenance | 50ml、100ml、200ml | 2 |   |
 | Electronic balance | Placement solution | 1 unit, 1-500g | 1 |   |
-| syringe | daily maintenance, cleaning | 5mL、20ml | some |   |
-| medicine spoon | Solution preparation | Large 20cm | 2 |   |
+| Syringe | daily maintenance, cleaning | 5mL、20ml | some |   |
+| Medicine spoon | Solution preparation | Large 20cm | 2 |   |
 | Parafilm | Seal bottle mouth, tube mouth, etc. |   | some |   |
 | Aluminum foil | seal |   | some |   |
 | Power free gloves/mask/alcohol/ | protection |   | some |   |
