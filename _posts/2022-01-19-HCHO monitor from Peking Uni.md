@@ -38,9 +38,9 @@ comments: true
     甲醛仪：1L/min，每日走30-40分钟空白，共需要**2000L**（按采样50天，一天走40分钟空白计算）。<br>
     CEAS：200ml/min，共需要14400L（按采样50天计算）如**40L**一瓶（10MPa=100bar）则需要**5**瓶，CEAS的氮气用量比较大，能否用液氮供氮气。
 
-2. 氦气：4L
-3. NO：10ml/l, 需要两瓶8L的NO
-4. 二氧化碳：4L
+2. CEAS - 氦气：4L
+3. CEAS - NO：10ml/l, 需要两瓶8L的NO
+4. Nephelometer - 二氧化碳：4L
 
 # 设备/ Equipment
 
@@ -109,9 +109,9 @@ The estimation method of the chemicals required for the formaldehyde (HCHO) moni
 
     Formaldehyde meter: 1L/min, 30-40 minutes of blank space per day, a total of 2000L is required (calculated by sampling 50 days, 40 minutes of blank space a day)<br>
     CEAS: 200ml/min, a total of 14400L (calculated by sampling 50 days) such as 40L requires 5 bottles, CEAS nitrogen dosage is relatively large, can use liquid nitrogen to supply nitrogen.
-2. Helium: 4L
-3. NO: 10 ml/l, two bottles of NO of 8L are required
-4. Carbon dioxide: 4L
+2. CEAS - Helium: 4L
+3. CEAS - NO: 10 ml/l, two bottles of NO of 8L are required
+4. Nephelometer - Carbon dioxide: 4L
 
 # Equipment
 1. The formaldehyde meter needs to store 5L of the reaction liquid R2 in the refrigerator, and the refrigerator needs to be placed on the side of the formaldehyde meter.
