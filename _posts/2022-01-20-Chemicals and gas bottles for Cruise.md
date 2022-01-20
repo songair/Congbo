@@ -23,6 +23,8 @@ comments: true
 |   |   | Formaldehyde (CAS 107-21-1)) stock solution/standard solution |
 |   |   | Potassium hydroxide (CAS 1310-58-3) |
 |   |   | Alcohol (CAS 64-17-5) |
+| Api-ToF | Bham | Reagent grade nitric acid (70% w/w concentration or thereabouts, around 10 mL) |
+| PSM | Bham | Diethylene Glycol, about 500 mL.  butanol (for CPC) |
 | AiRRmonia | Outside container | 20g Sodium hydroxide (CAS 1310-73-2, ACS reagent or AR grade; pellets) |
 |   |   | 20g Ammonium sulphate (NH4)2SO4 (CAS 7783-20-2, ACS reagent grade) |
 | HR-ToF-AMS | Bham | NH4NO3 (CAS 6484-52-2, product ID:22249-100G，2 bottles) |
@@ -69,6 +71,7 @@ comments: true
 |   |   | nitrogen research grade |
 | PTR-Qi-ToF | Leeds | PTR-MS gas standards, Apel-Riemer Environmental |
 |   |   | Nitrogen? |
+| Api-ToF | Bham | N5 (ultrapure) nitrogen gas. 3 ccm/min, a small cylinder |
 | HONO - LOPAP | BAS | 2 cylinders (N5 purity, size L) |
 | HCHO and N2O5 monitors | Leeds | 6 * 40L (100bar) nitrogen |
 |   |   | 4L Helium |
