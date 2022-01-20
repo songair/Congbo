@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Chemicals and gas bottles for SEANA Cruise
-categories: [Cruise,SEANA]
+categories: [SEANA]
 comments: true
 ---
 # Chemicals

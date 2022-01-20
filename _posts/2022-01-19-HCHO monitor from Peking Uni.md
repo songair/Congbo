@@ -1,9 +1,11 @@
 ---
 layout: mypost
 title: HCHO, N2O5 monitors from Peking University
-categories: [Cruise,SEANA]
+categories: [SEANA]
 comments: true
 ---
+Instruments from Peking University during the SEANA Cruise
+
 |                | HCHO                                                        | N2O5                                                                                    | j-values                                             |
 |----------------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|------------------------------------------------------|
 | Size           | 45×15×56cm<br>(fits in 19” std standard cabinet)                | 90×43×26cm                                                                              | 45×15×50 cm<br>(put a table in the container)           |

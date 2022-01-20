@@ -5,8 +5,8 @@
     <link>https://congbo.site</link>
     <description>Congbo's Blog</description>
     <language>en</language>
-    <pubDate>Thu, 20 Jan 2022 14:04:52 +0000</pubDate>
-    <lastBuildDate>Thu, 20 Jan 2022 14:04:52 +0000</lastBuildDate>
+    <pubDate>Thu, 20 Jan 2022 14:27:31 +0000</pubDate>
+    <lastBuildDate>Thu, 20 Jan 2022 14:27:31 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     <atom:link href="https://congbo.site/static/xml/rss.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -33,19 +33,16 @@
     <item>
       <title>HCHO, N2O5 monitors from Peking University</title>
       <link>https://congbo.site/posts/2022/01/19/HCHO-monitor-from-Peking-Uni.html</link>
-      <description>
+      <description>Instruments from Peking University during the SEANA Cruise
+
+
   
     
        
       HCHO
       N2O5
       j-values
-    
-  
-  
-    
-      Size
-      45×15×56cm(fits in 19” std sta...</description>
+   ...</description>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       <gui>https://congbo.site/posts/2022/01/19/HCHO-monitor-from-Peking-Uni.html</gui>
     </item>

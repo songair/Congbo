@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Casual inference and air quality
-categories: [Casual,AQ]
+categories: [AQ]
 comments: true
 ---
 
