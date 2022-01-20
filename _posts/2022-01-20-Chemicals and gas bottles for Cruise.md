@@ -6,9 +6,9 @@ comments: true
 ---
 # Chemicals
 
-| Instrument | Container | Chemical list |
-|---|---|---|
-| CPC | Bham Leeds BAS | 2.5L Butanol (CAS 71-36-3) for each container   |
+| Instrument | Container | Chemical list |Check |
+|---|---|---|:---: | 
+| CPC | Bham Leeds BAS | 2.5L Butanol (CAS 71-36-3) for each container   |  ✅ ❌   | 
 | HONO-LOPAP | BAS | 2L HCL (CAS 7647-01-0) |
 |   |   | 0.5kg NaOH (CAS 1310-73-2) |
 |   |   | 1L HNO3 (CAS 7697-37-2) |
