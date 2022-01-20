@@ -13,7 +13,7 @@ html {
   font-family: 'Georgia','Microsoft YaHei',   'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
 }
 body {
-  max-width: 680px;
+  max-width: 750px;
   padding: 0 14px;
   margin: 0 auto;
 }
@@ -189,12 +189,13 @@ input:-webkit-autofill {
 @media print{
   body{ background-color:#FFFFFF; background-image:none; color:#000000; }
   @page {size: A3; margin-right: 1cm; margin-top: 1.9cm; margin-bottom: 1.9cm;}
-  @page :left {margin-left: 8cm;}
-  @page :right {margin-left: 8cm;}
-  header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower, .vempty { display:none;}
+  @page :left {margin-left: 9cm;}
+  @page :right {margin-left: 9cm;}
+  header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower, .vempty
+ { display:none;}
   #leftbar{ display:none;}
   /* print.css */
-  table, img, svg {break-inside: avoid;}
+  img, svg {break-inside: avoid;}
   #contentarea{ width:100%;}
   img.dark {filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);}
 }
