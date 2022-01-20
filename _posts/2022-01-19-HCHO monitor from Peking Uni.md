@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: HCHO, N2O5 monitors from Peking University
+title: HCHO, N2O5 monitors from Peking Uni.
 categories: [SEANA]
 comments: true
 ---
