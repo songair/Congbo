@@ -96,7 +96,7 @@ atm=pd.DataFrame(index=np.array(dtime),
 atm['blh']=np.nan
 atm['tcc']=np.nan
 atm['sp']=np.nan
-atm['blh'].iloc[:-2]=f.variables['blh'][:,:,a,b][~f.variables['blh'][:,:,a,b].mask]
+atm['blh'].iloc[:-2]=f.variables['blh'][:,:,a,b][~f.variables['blh'][:,:,a,b].mask] ## Check number of NAN values for the last records [:-2]
 atm['tcc'].iloc[:-2]=f.variables['tcc'][:,:,a,b][~f.variables['tcc'][:,:,a,b].mask]
 atm['sp'].iloc[:-2]=f.variables['sp'][:,:,a,b][~f.variables['sp'][:,:,a,b].mask]
 atm.index.name='date'
