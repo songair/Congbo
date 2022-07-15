@@ -79,8 +79,8 @@ def closest(lst, K):
 
 ```python
 # python codes
-av=closest(list(f.variables['latitude'][:]),51.15)
-bv=closest(list(f.variables['longitude'][:]),-1.44)
+av=closest(list(f.variables['latitude'][:]),51.15) ###latitude is 51.15
+bv=closest(list(f.variables['longitude'][:]),-1.44) ###longitude is -1.44
 a=list(f.variables['latitude'][:]).index(av)
 b=list(f.variables['longitude'][:]).index(bv)
 ```
