@@ -5,7 +5,7 @@ categories: [Presentation]
 comments: true
 ---
 
-<div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
+<div id="adobe-dc-view" style="height: 520px; "></div>
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 <script type="text/javascript">
 	document.addEventListener("adobe_dc_view_sdk.ready", function(){
