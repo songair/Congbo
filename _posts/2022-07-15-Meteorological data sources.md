@@ -16,7 +16,7 @@ comments: true
 library (openair)
 dataDir="xxx" ### Your working directory
 setwd(dataDir)  ### Set the working directory
-workingDirectory<<-dataDir  ### Shortcut for the working directory
+workingDirectory<-dataDir  ### Shortcut for the working directory
 getMet <- function (year = 2021:2022, month = 1:12, path_met = dataDir) {
   for (i in seq_along(year)) {
     for (j in seq_along(month)) {
