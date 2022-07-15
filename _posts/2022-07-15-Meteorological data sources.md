@@ -104,9 +104,9 @@ atm.index=atm.index.astype('datetime64[ns]')
 atm=atm.sort_index()
 atm.to_csv("NETCDF_data.csv")
 ```
-Sometimes, the data can be four dimension: f.variables['blh'][:,:,a,b] or three dimension: f.variables['blh'][:,a,b]
+The data can be four dimension: f.variables['blh'][:,:,a,b] or three dimension: f.variables['blh'][:,a,b]
 
 ## Useful links
 * [https://github.com/sonnymetvn/Basic-Python-for-Meteorology/tree/main/notebook](https://github.com/sonnymetvn/Basic-Python-for-Meteorology/tree/main/notebook)
 * [https://cran.r-project.org/web/packages/ecmwfr/](https://cran.r-project.org/web/packages/ecmwfr/)
-* https://cran.r-project.org/web/packages/ecmwfr/vignettes/cds_vignette.html
+* [https://cran.r-project.org/web/packages/ecmwfr/vignettes/cds_vignette.html](https://cran.r-project.org/web/packages/ecmwfr/vignettes/cds_vignette.html)
