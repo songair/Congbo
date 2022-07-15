@@ -45,3 +45,4 @@ write.csv(dat,'BeijingMet.csv') ### Set filename
 
 ## ERA5 hourly data on single levels from 1959 to present
 * Website: [https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)
+* Useful link: [https://cran.r-project.org/web/packages/ecmwfr/](https://cran.r-project.org/web/packages/ecmwfr/)
