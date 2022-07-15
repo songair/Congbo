@@ -104,3 +104,4 @@ atm.index=atm.index.astype('datetime64[ns]')
 atm=atm.sort_index()
 atm.to_csv("NETCDF_data.csv")
 ```
+Sometimes, the data can be four dimension: f.variables['blh'][:,:,a,b] or three dimension: f.variables['blh'][:,a,b]
