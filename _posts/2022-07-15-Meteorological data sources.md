@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Meteorological data sources
-categories: [Data]
+categories: [Tutorial]
 comments: true
 ---
 
