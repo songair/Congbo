@@ -4,14 +4,17 @@ title: Back Trajectory Using HYSPLIT
 categories: [Tutorial]
 comments: true
 ---
+Install the Hysplit model into the computer
 
+
+
+Using R codes to run HYSPLIT
 ```R
 library (openair)
 library(lubridate)
 library(latticeExtra)
-dataDir="D:/Hysplit"
+dataDir="D:\\Hysplit"
 setwd(dataDir)  ### Set the working directory
-workingDirectory<<-dataDir  ### Shortcut for the working directory
 ```
 ```R
 hy.path<-"c:\\hysplit4\\"         ### Install the Hysplit model into the computer
