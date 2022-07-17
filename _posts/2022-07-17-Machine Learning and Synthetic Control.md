@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Casuality of Winter Heating
+title: Machine Learning and Synthetic Control
 categories: [Tutorial]
 comments: true
 ---
