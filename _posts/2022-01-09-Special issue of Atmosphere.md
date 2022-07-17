@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Special issue in Atmosphere
-categories: [Ads]
+categories: [Air Quality]
 ---
 
 ![Special issue](banner.png)
@@ -24,4 +24,3 @@ Dr. Congbo Song<br>
 Dr. Qili Dai<br>
 Dr. Deepchandra Srivastava<br>
 Guest Editors
-
