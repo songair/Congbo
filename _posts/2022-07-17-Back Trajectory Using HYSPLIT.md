@@ -4,11 +4,14 @@ title: Back Trajectory Using HYSPLIT
 categories: [Tutorial]
 comments: true
 ---
-Install the Hysplit model into the computer
+### Install the Hysplit model into the computer
+* Install TCL: [https://www.ready.noaa.gov/HYSPLIT_util.php](https://www.ready.noaa.gov/HYSPLIT_util.php)
 
+* Install HYSPLIT: [https://www.ready.noaa.gov/HYSPLIT_hytrial.php](https://www.ready.noaa.gov/HYSPLIT_hytrial.php)
 
+* Using TCL to open HYSPLIT
 
-Using R codes to run HYSPLIT
+### Using R codes to run HYSPLIT
 ```R
 library (openair)
 library(lubridate)
@@ -139,3 +142,7 @@ for (i in 2009:2020) {    ### Change the date in
            met = "D:\\Hysplit\\TrajData\\", out = "D:\\Hysplit\\TrajProc\\",
            hy.path = "C:\\hysplit4\\") }
 ```
+
+### Useful links
+
+* [https://bookdown.org/david_carslaw/openair/appendix-hysplit.html](https://bookdown.org/david_carslaw/openair/appendix-hysplit.html)
