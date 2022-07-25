@@ -9,7 +9,7 @@ Update: 2022/01/09
 
 > **2022**
 
-**Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>
+**Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>. (2022). <span style="color:red;">Understanding Sources and Drivers of Size-Resolved Aerosol in the High Arctic Islands of Svalbard Using a Receptor Model Coupled with Machine Learning</span>.
 Environmental Science & Technology Article ASAP. <https://pubs.acs.org/doi/10.1021/acs.est.1c07796>**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
 
 Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters. <https://doi.org/10.1021/acs.estlett.1c00865> **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf)]**
