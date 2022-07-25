@@ -9,6 +9,9 @@ Update: 2022/01/09
 
 > **2022**
 
+**Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>
+Environmental Science & Technology Article ASAP. <https://pubs.acs.org/doi/10.1021/acs.est.1c07796>**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
+
 Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters. <https://doi.org/10.1021/acs.estlett.1c00865> **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf)]**
 
 Xu, J.<sup>*</sup>, Harrison, R.M., **Song, C.**, Hou, S., Wei, L., Fu, P., Li, H., Li, W. and Shi, Z.<sup>*</sup> (2022). PM2.5-bound silicon-containing secondary organic aerosols (Si-SOA) in Beijing ambient air. Chemosphere, 288, p.132377. <https://doi.org/10.1016/j.chemosphere.2021.132377> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0045653521028496.pdf)]**
