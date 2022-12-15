@@ -10,7 +10,7 @@ title: Contact
 
 > Address
 
-Simon building 2.03, 
+Room 2.03, Simon building
 
 University of Manchester
 
