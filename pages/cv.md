@@ -2,7 +2,7 @@
 layout: mypost
 title: Curriculum Vitae
 ---
-Update: 2022/07/17
+Update: 2022/12/15
 
 > Biography
 
