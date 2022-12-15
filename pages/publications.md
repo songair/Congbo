@@ -6,8 +6,11 @@ title: Publications
 Update: 2022/07/25
 
 |Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)｜ 
-[^_^]:
+
+<!--
 | <span id="badgeCont131"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont131&rid=AAE-8183-2019&size=small"></script></span> |
+-->
+
 
 > **2022**
 
