@@ -10,14 +10,10 @@ title: Contact
 
 > Address
 
-Room 2.03, Simon building
-
-University of Manchester
-
-M13 9PL 
-
-Manchester
-
+Room 2.03, Simon building\
+University of Manchester\
+M13 9PL\
+Manchester\
 United Kingdom
  
 > Email
