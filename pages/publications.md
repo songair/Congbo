@@ -3,7 +3,7 @@ layout: mypost
 title: Publications
 ---
 
-Update: 2022/07/25
+Update: 2022/12/15
 
 |Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)｜ 
 
@@ -14,10 +14,12 @@ Update: 2022/07/25
 
 > **2022**
 
-**Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>. (2022). <span style="color:red;">Understanding Sources and Drivers of Size-Resolved Aerosol in the High Arctic Islands of Svalbard Using a Receptor Model Coupled with Machine Learning</span>.
-Environmental Science & Technology Article ASAP. <https://pubs.acs.org/doi/10.1021/acs.est.1c07796>**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
+Brean, j., Beddows, D., Harrison, R., Song, C., Tunved, P., Ström, I., Krejci., Radovan, Freud, E., Massling, Andreas., Skov H., Asmi E., Lupi, A., Dall’Osto, M. (2022). Collective geographical eco-regions and precursor sources driving Arctic new particle formation. Atmospheric Chemistry and Physics. <https://acp.copernicus.org/preprints/acp-2022-280/> (Accepted)
 
-Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters. <https://doi.org/10.1021/acs.estlett.1c00865> **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf)]**
+**Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>. (2022). <span style="color:red;">Understanding Sources and Drivers of Size-Resolved Aerosol in the High Arctic Islands of Svalbard Using a Receptor Model Coupled with Machine Learning</span>.
+Environmental Science & Technology, 56 (16), 11189-11198. <https://pubs.acs.org/doi/10.1021/acs.est.1c07796>**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
+
+Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters, 9 (2), 112-119.  <https://doi.org/10.1021/acs.estlett.1c00865> **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf)]**
 
 Xu, J.<sup>*</sup>, Harrison, R.M., **Song, C.**, Hou, S., Wei, L., Fu, P., Li, H., Li, W. and Shi, Z.<sup>*</sup> (2022). PM2.5-bound silicon-containing secondary organic aerosols (Si-SOA) in Beijing ambient air. Chemosphere, 288, p.132377. <https://doi.org/10.1016/j.chemosphere.2021.132377> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0045653521028496.pdf)]**
 
