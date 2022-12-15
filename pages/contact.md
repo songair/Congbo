@@ -10,11 +10,13 @@ title: Contact
 
 > Address
 
-School of Geography, Earth and Environment Sciences, University of Birmingham, Birmingham B15 2TT, UK
+Simon building 2.03, University of Manchester
+M13 9PL Manchester
+United Kingdom
  
 > Email
 
-<c.song.1@bham.ac.uk>
+<congbo.song@manchester.ac.uk>
 
 > Website
 
