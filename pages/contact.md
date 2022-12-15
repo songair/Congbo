@@ -10,8 +10,14 @@ title: Contact
 
 > Address
 
-Simon building 2.03, University of Manchester
-M13 9PL Manchester
+Simon building 2.03, 
+
+University of Manchester
+
+M13 9PL 
+
+Manchester
+
 United Kingdom
  
 > Email
