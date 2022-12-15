@@ -5,7 +5,7 @@ title: Publications
 
 Update: 2022/12/15
 
-|Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)｜ 
+|Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
 
 <!--
 | <span id="badgeCont131"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont131&rid=AAE-8183-2019&size=small"></script></span> |
