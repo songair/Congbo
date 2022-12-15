@@ -14,19 +14,20 @@ Congbo has published over 30 peer-reviewed articles (**[list](/pages/publication
 
 > Research interests
 
-**[Field Measurement]**. Research Cruise, tunnel tests, near-road measurements and ambient measurements using a wide range of online and offline instruments. 
+**Field Measurement**. Research Cruise, tunnel tests, near-road measurements and ambient measurements using a wide range of online and offline instruments. 
 
-**[Source Emission and Source Apportionment]**. Detailed characterization of particulate and gas emissions from anthropogenic and natural sources. Interpretating aerosol and gaseous chemical data using multivariate statistical methods (e.g., receptor models) and machine learning techniques; Revealing environmental drivers for source-specific air pollution. His recent focus is to develop real-time source apportionment techniques using single-particle mass spectrometry. 
+**Source Emission and Source Apportionment**. Detailed characterization of particulate and gas emissions from anthropogenic and natural sources. Interpretating aerosol and gaseous chemical data using multivariate statistical methods (e.g., receptor models) and machine learning techniques; Revealing environmental drivers for source-specific air pollution. His recent focus is to develop real-time source apportionment techniques using single-particle mass spectrometry. 
 
-**[Machine Learning and Causal Inference]**. Using machine learning (deweathering) and causal inference techniques to decouple emissions and meteorology to evaluate causality of air quality management.
+**Machine Learning and Causal Inference**. Using machine learning (deweathering) and causal inference techniques to decouple emissions and meteorology to evaluate causality of air quality management.
 
 > Methodological knowledge
 
-**[Instrumentation]**: Single Particle Aerosol Mass Spectrometer (SPAMS), Aerosol Chemical Speciation Monitor (ACSM), Particle size spectrometers (APS, SMPS, PSM and NAIS), On-line metal elements (Xact), AiRRmonia, Single Particle Soot Photometer – Extended Range (SP2-XR), Aethalometer, Multi Angle Absorption Photometer (MAAP), Cavity Attenuated Phase Shift extinction (CAPS) and Cloud condensation nuclei (CCN). 
+**Instrumentation**: Single Particle Aerosol Mass Spectrometer (SPAMS), Aerosol Chemical Speciation Monitor (ACSM), Particle size spectrometers (APS, SMPS, PSM and NAIS), On-line metal elements (Xact), AiRRmonia, Single Particle Soot Photometer – Extended Range (SP2-XR), Aethalometer, Multi Angle Absorption Photometer (MAAP), Cavity Attenuated Phase Shift extinction (CAPS) and Cloud condensation nuclei (CCN). 
 
-**[Advanced Data Analysis]**. Multivariate data fusion- Integrating traffic data, meteorological data and pollutant data. Statistical analysis and data mining. Clustering techniques, receptor models (CMB, PMF, ME-2), machine learning techniques, causal inference techniques. Particularly, he is skilled at understanding sources and processes of air pollution (e.g., size-resolved aerosol) using a coupling receptor model and explainable machine learning technique.
+**Advanced Data Analysis**. Multivariate data fusion- Integrating traffic data, meteorological data and pollutant data. Statistical analysis and data mining. Clustering techniques, receptor models (CMB, PMF, ME-2), machine learning techniques, causal inference techniques. Particularly, he is skilled at understanding sources and processes of air pollution (e.g., size-resolved aerosol) using a coupling receptor model and explainable machine learning technique.
 
 > Employment
+
 - 2022.12-: Senior Research Scientist (NCAS) in Data Science and Analytics in Atmospheric Air Pollution, The National Centre for Atmospheric Science (NCAS) based in the Department of Earth and Environmental Science, the University of Manchester, UK
 
 - 2019.08-2022.08: Research fellow, School of Geography, Earth and Environmental Sciences, University of Birmingham, UK
