@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Blog | Congbo Song</title>
+  <title>Dr. Congbo Song | Congbo Song</title>
   <meta charset="utf-8" />
   <meta http-equiv="content-language" content="en" />
   <meta name="theme-color" content="#ffffff" />
@@ -11,19 +11,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="applicable-device" content="pc,mobile">
   <meta name="author" content="Congbo Song" />
-  <meta name="description" content="Congbo's Blog"/>
+  <meta name="description" content="Congbo Song"/>
   <meta name="keywords" content="Congbo Song, 宋从波, Congbo, Source emissions, Source apportionment, Atmospheric, Air pollution, Air quality, Clean air, Machine learning, intervention"/>
   <link rel="icon" href="/static/img/favicon.ico" />
   <link rel="apple-touch-icon" href="/static/img/logo.png" />
-  <link rel="stylesheet" href="/static/css/common.css?t=20220120225514">
-  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20220120225514">
-  <link rel="stylesheet" href="/static/css/page.css?t=20220120225514">
-  <link rel="prefetch" href="/static/xml/search.xml?t=20220120225514">
-  <link rel="prefetch" href="/static/js/search.js?t=20220120225514">
+  <link rel="stylesheet" href="/static/css/common.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/post.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/code-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/code-light.css?t=20221216225644">
+  <link rel="prefetch" href="/static/xml/search.xml?t=20221216225644">
+  <link rel="prefetch" href="/static/js/search.js?t=20221216225644">
   <script>
     window.blog = {
       baseurl:"",
-      buildAt:"20220120225514",
+      buildAt:"20221216225644",
       darkTheme: false,
       setDarkTheme: function (dark) {
         this.darkTheme = Boolean(dark);
@@ -58,85 +60,42 @@
 <header class="header">
   <img class="logo" src="/static/img/logo.jpg" alt="logo"/>
   <nav class="menu">
-    <a href="/"  class="hover-underline">Blog</a>
+    <a href="/"  class="hover-underline">About me</a>
+    <a href="/pages/post.html"  class="hover-underline">Blog</a>
     <a href="/pages/tags.html"  class="hover-underline">Tags</a>
     <a href="/pages/search.html"  class="hover-underline">Search</a>
-    <a href="/pages/publications.html"  class="hover-underline">Publications</a>
+    <a href="/pages/pubs.html"  class="hover-underline">Pubs</a>
     <a href="/pages/cv.html"  class="hover-underline">CV</a>
     <a href="/pages/contact.html"  class="hover-underline">Contact</a>
     </nav>
 </header>
-<div class="page page-index">
-  <div class="list-post">
-      <h2 id="2022">2022</h2>
-      <ul>
-        <li>
-          <span class="date">2022/01/20</span>
-          <div class="title">
-            <a href="/posts/2022/01/20/Chemicals-and-gas-bottles-for-Cruise.html" class="hover-underline">Chemicals and gas bottles for SEANA Cruise</a>
-          </div>
-          <div class="categories">
-            <a href="/pages/tags.html#SEANA" class="hover-underline">SEANA</a>
-          </div>
-        </li>
-        <li>
-          <span class="date">2022/01/19</span>
-          <div class="title">
-            <a href="/posts/2022/01/19/HCHO-monitor-from-Peking-Uni.html" class="hover-underline">HCHO, N2O5 monitors from Peking Uni.</a>
-          </div>
-          <div class="categories">
-            <a href="/pages/tags.html#SEANA" class="hover-underline">SEANA</a>
-          </div>
-        </li>
-        <li>
-          <span class="date">2022/01/16</span>
-          <div class="title">
-            <a href="/posts/2022/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%81%B0%E9%9C%BE%E6%B1%A1%E6%9F%93.html" class="hover-underline">机器学习与灰霾污染</a>
-          </div>
-          <div class="categories">
-            <a href="/pages/tags.html#AQ" class="hover-underline">AQ</a>
-          </div>
-        </li>
-        <li>
-          <span class="date">2022/01/12</span>
-          <div class="title">
-            <a href="/posts/2022/01/12/Casual-inference-and-air-quality.html" class="hover-underline">Casual inference and air quality</a>
-          </div>
-          <div class="categories">
-            <a href="/pages/tags.html#AQ" class="hover-underline">AQ</a>
-          </div>
-        </li>
-        <li>
-          <span class="date">2022/01/09</span>
-          <div class="title">
-            <a href="/posts/2022/01/09/%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95Github-Pages%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5.html" class="hover-underline">本地测试Github Pages静态网页</a>
-          </div>
-          <div class="categories">
-            <a href="/pages/tags.html#Github" class="hover-underline">Github</a>
-          </div>
-        </li>
-        <li>
-          <span class="date">2022/01/09</span>
-          <div class="title">
-            <a href="/posts/2022/01/09/Special-issue-of-Atmosphere.html" class="hover-underline">Special issue in Atmosphere</a>
-          </div>
-          <div class="categories">
-            <a href="/pages/tags.html#Ads" class="hover-underline">Ads</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-</div>
+<div class="page page-post" data-spy="scroll" data-target=".toc" data-offset="20">
+  <h1 class="title" id="Dr. Congbo Song">Dr. Congbo Song</h1>
+  
+  
+  <div class="post">
+    <table>
+  <tbody>
+    <tr>
+      <td><img src="/static/img/NCAS.png" align="center" style="width: 530px" /></td>
+      <td><img src="/static/img/Machester.png" align="center" style="width: 300px" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<script type="text/javascript" src="/static/js/blog.js?t=20220120225514"></script>
-<script type="text/javascript" src="/static/js/search.js?t=20220120225514"></script>
+<p>I’m a <span style="color:blue"><strong><a href="https://research.manchester.ac.uk/en/persons/congbo-song">Senior Research Scientist</a></strong></span> (2022.12-) in Data Science and Analytics in Atmospheric Air Pollution, at The <strong><a href="https://ncas.ac.uk">National Centre for Atmospheric Science (NCAS)</a></strong> based in the Department of Earth and Environmental Science, the University of Manchester. My research interests are in the fields of <strong>Chain of Air Pollution Accountability</strong>, including Emissions, Air Quality, Public health and Air Quality Interventions. A key aspect of my research is to understand the impacts of source-specific air pollution on human health and climate through advanced receptor modeling. I’m also interested in understanding environmental policies, environmental drivers and atmospheric processes controlling the air we breath using data-driven models such as machine learning and casual inference techniques.</p>
+
+<p>I’m a faculty in the <strong><a href="https://m-edal.github.io">Manchester Environmental Data Analytics Lab (MEDAL)</a></strong>, with <a href="https://research.manchester.ac.uk/en/persons/david.topping">Prof. David Topping</a> and <a href="https://zhonghuazheng.com">Dr. Zhonghua Zheng</a>.</p>
+
+  </div>
+  
+</div>
+<script type="text/javascript" src="/static/js/blog.js?t=20221216225644"></script>
+<script type="text/javascript" src="/static/js/search.js?t=20221216225644"></script>
 
 <footer class="footer">
-  <span>© Congbo Song 2022</span>
-  | <a href="/static/xml/rss.xml">RSS</a> 
-  | <span>Theme By</span><a href="https://github.com/TMaize/tmaize-blog">TMaize</a>
-  
-      | <a href="https://github.com/songair/congbo">GitHub</a>
+  <span>© CC BY-NC-SA 4.0</span>
+  | <a href="/static/xml/rss.xml">RSS</a>
   
 </footer>
 <div id="to-top">

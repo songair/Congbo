@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Back Trajectory Using HYSPLIT | Congbo Song</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="author" content="Congbo Song" />
+  <meta name="description" content="Back Trajectory Using HYSPLIT"/>
+  <meta name="keywords" content="Congbo Song,Tutorial"/>
+  <link rel="icon" href="/static/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/static/img/logo.png" />
+  <link rel="stylesheet" href="/static/css/common.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/post.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/code-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/code-light.css?t=20221216225644">
+  <link rel="prefetch" href="/static/xml/search.xml?t=20221216225644">
+  <link rel="prefetch" href="/static/js/search.js?t=20221216225644">
+  <script>
+    window.blog = {
+      baseurl:"",
+      buildAt:"20221216225644",
+      darkTheme: false,
+      setDarkTheme: function (dark) {
+        this.darkTheme = Boolean(dark);
+        document.documentElement.className = this.darkTheme ? 'dark': '';
+        document.querySelector('meta[name=theme-color]').setAttribute('content', this.darkTheme ? '#2D2E32': '#FFFFFF');
+      }
+    }
+    if (sessionStorage.darkTheme !== undefined) {
+      blog.setDarkTheme(sessionStorage.darkTheme === 'true'); // 记忆值，单个窗口内有效
+    } else {
+      blog.setDarkTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); // 跟随系统
+    }
+    if (window.matchMedia) {
+      var media = window.matchMedia('(prefers-color-scheme: dark)');
+      media.addListener(function (ev) {
+        blog.setDarkTheme(ev.currentTarget.matches);
+        sessionStorage.removeItem('darkTheme');
+      });
+    }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  
+</head>
+<body ondragstart="return false;">
+<header class="header">
+  <img class="logo" src="/static/img/logo.jpg" alt="logo"/>
+  <nav class="menu">
+    <a href="/"  class="hover-underline">About me</a>
+    <a href="/pages/post.html"  class="hover-underline">Blog</a>
+    <a href="/pages/tags.html"  class="hover-underline">Tags</a>
+    <a href="/pages/search.html"  class="hover-underline">Search</a>
+    <a href="/pages/pubs.html"  class="hover-underline">Pubs</a>
+    <a href="/pages/cv.html"  class="hover-underline">CV</a>
+    <a href="/pages/contact.html"  class="hover-underline">Contact</a>
+    </nav>
+</header>
+<div class="page page-post" data-spy="scroll" data-target=".toc" data-offset="20">
+  <h1 class="title" id="Back Trajectory Using HYSPLIT">Back Trajectory Using HYSPLIT</h1>
+  
+  <div class="subtitle">Posted on Jul 17, 2022</div>
+  
+  
+  <div class="post">
+    <h3 id="install-the-hysplit-model-into-the-computer">Install the Hysplit model into the computer</h3>
+<ul>
+  <li>
+    <p>Install TCL: <a href="https://www.ready.noaa.gov/HYSPLIT_util.php">https://www.ready.noaa.gov/HYSPLIT_util.php</a></p>
+  </li>
+  <li>
+    <p>Install HYSPLIT: <a href="https://www.ready.noaa.gov/HYSPLIT_hytrial.php">https://www.ready.noaa.gov/HYSPLIT_hytrial.php</a></p>
+  </li>
+  <li>
+    <p>Using TCL to open HYSPLIT</p>
+  </li>
+</ul>
+
+<h3 id="using-r-codes-to-run-hysplit">Using R codes to run HYSPLIT</h3>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="w"> </span><span class="p">(</span><span class="n">openair</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">latticeExtra</span><span class="p">)</span><span class="w">
+</span><span class="n">dataDir</span><span class="o">=</span><span class="s2">"D:\\Hysplit"</span><span class="w">
+</span><span class="n">setwd</span><span class="p">(</span><span class="n">dataDir</span><span class="p">)</span><span class="w">  </span><span class="c1">### Set the working directory</span><span class="w">
+</span></code></pre></div></div>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hy.path</span><span class="o">&lt;-</span><span class="s2">"c:\\hysplit4\\"</span><span class="w">         </span><span class="c1">### Install the Hysplit model into the computer</span><span class="w">
+</span><span class="n">read.files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">96</span><span class="p">,</span><span class="w"> </span><span class="n">hy.path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="c1">## find tdump files</span><span class="w">
+  </span><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Sys.glob</span><span class="p">(</span><span class="s2">"tdump*"</span><span class="p">)</span><span class="w">
+  </span><span class="n">output</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">file</span><span class="p">(</span><span class="s1">'Rcombined.txt'</span><span class="p">,</span><span class="w"> </span><span class="s1">'w'</span><span class="p">)</span><span class="w">
+  </span><span class="c1">## read through them all, ignoring 1st 7 lines</span><span class="w">
+  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">files</span><span class="p">){</span><span class="w">
+    </span><span class="n">input</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w">
+    </span><span class="n">input</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">input</span><span class="p">[</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">)]</span><span class="w"> </span><span class="c1"># delete header</span><span class="w">
+    </span><span class="n">writeLines</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">)</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="n">close</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="w">
+    </span><span class="n">traj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">hy.path</span><span class="p">,</span><span class="w"> </span><span class="s2">"working\\Rcombined.txt"</span><span class="p">),</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+  </span><span class="n">traj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">V2</span><span class="p">,</span><span class="w"> </span><span class="n">V7</span><span class="p">,</span><span class="w"> </span><span class="n">V8</span><span class="p">))</span><span class="w">
+  </span><span class="n">traj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rename</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">V1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"receptor"</span><span class="p">,</span><span class="w"> </span><span class="n">V3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">,</span><span class="w"> </span><span class="n">V4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"month"</span><span class="p">,</span><span class="w"> </span><span class="n">V5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+                         </span><span class="n">V6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hour"</span><span class="p">,</span><span class="w"> </span><span class="n">V9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hour.inc"</span><span class="p">,</span><span class="w"> </span><span class="n">V10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lat"</span><span class="p">,</span><span class="w"> </span><span class="n">V11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lon"</span><span class="p">,</span><span class="w">
+                         </span><span class="n">V12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"height"</span><span class="p">,</span><span class="w"> </span><span class="n">V13</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pressure"</span><span class="p">))</span><span class="w">
+  </span><span class="c1">## hysplit uses 2-digit years ...</span><span class="w">
+  </span><span class="n">year</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">year</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">
+  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">year</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">year</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2000</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">year</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1900</span><span class="w">
+  </span><span class="n">traj</span><span class="o">$</span><span class="n">date2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span><span class="w"> </span><span class="n">ISOdatetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="n">day</span><span class="p">,</span><span class="w"> </span><span class="n">hour</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w">
+                                       </span><span class="n">tz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GMT"</span><span class="p">))</span><span class="w">
+  </span><span class="c1">## arrival time</span><span class="w">
+  </span><span class="n">traj</span><span class="o">$</span><span class="n">date</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">date2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">3600</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">traj</span><span class="o">$</span><span class="n">hour.inc</span><span class="w">
+  </span><span class="n">traj</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">add.met</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="c1">## if month is one, need previous year and month = 12</span><span class="w">
+  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">month</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">month</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">12</span><span class="w">
+    </span><span class="n">Year</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">Year</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">month</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"0"</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="c1">## add first line</span><span class="w">
+  </span><span class="n">write.table</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"echo"</span><span class="p">,</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="s2">" &gt;&gt;CONTROL"</span><span class="p">),</span><span class="w">
+              </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+              </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+  </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"echo RP"</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="s2">".gbl &gt;&gt;CONTROL"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+              </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">procTraj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">48.9</span><span class="p">,</span><span class="w"> </span><span class="n">lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2.2</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2019</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"paris"</span><span class="p">,</span><span class="w">
+                     </span><span class="n">met</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"D:\\Hysplit\\TrajData\\"</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"D:\\Hysplit\\TrajProc\\"</span><span class="p">,</span><span class="w">
+                     </span><span class="n">hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">hy.path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\\hysplit4\\"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="c1">## hours is the back trajectory time e.g. 96 = 4-day back trajectory</span><span class="w">
+  </span><span class="c1">## height is start height (m)</span><span class="w">
+  </span><span class="n">lapply</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"openair"</span><span class="p">,</span><span class="w"> </span><span class="s2">"plyr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"reshape2"</span><span class="p">),</span><span class="w"> </span><span class="n">require</span><span class="p">,</span><span class="w"> </span><span class="n">character.only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+  </span><span class="c1">## function to run 12 months of trajectories</span><span class="w">
+  </span><span class="c1">## assumes 96 hour back trajectories, 1 receptor</span><span class="w">
+  </span><span class="n">setwd</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">hy.path</span><span class="p">,</span><span class="w"> </span><span class="s2">"working\\"</span><span class="p">))</span><span class="w">
+  </span><span class="c1">## remove existing "tdump" files</span><span class="w">
+  </span><span class="n">path.files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">hy.path</span><span class="p">,</span><span class="w"> </span><span class="s2">"working\\"</span><span class="p">)</span><span class="w">
+  </span><span class="n">bat.file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">hy.path</span><span class="p">,</span><span class="w"> </span><span class="s2">"working\\test.bat"</span><span class="p">)</span><span class="w"> </span><span class="c1">## name of BAT file to add to/run</span><span class="w">
+  </span><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">path.files</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tdump"</span><span class="p">)</span><span class="w">
+  </span><span class="n">lapply</span><span class="p">(</span><span class="n">files</span><span class="p">,</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">file.remove</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w">
+  </span><span class="n">start</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="s2">"-01-01"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="n">end</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="s2">"-12-31 23:00"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="n">dates</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">as.POSIXct</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="s2">"GMT"</span><span class="p">),</span><span class="w"> </span><span class="n">as.POSIXct</span><span class="p">(</span><span class="n">end</span><span class="p">,</span><span class="w"> </span><span class="s2">"GMT"</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"1 hour"</span><span class="p">)</span><span class="w">
+  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">dates</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">year</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s2">"%y"</span><span class="p">)</span><span class="w">
+    </span><span class="n">Year</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s2">"%Y"</span><span class="p">)</span><span class="w"> </span><span class="c1"># long format</span><span class="w">
+    </span><span class="n">month</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s2">"%m"</span><span class="p">)</span><span class="w">
+    </span><span class="n">day</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s2">"%d"</span><span class="p">)</span><span class="w">
+    </span><span class="n">hour</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s2">"%H"</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"echo"</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="n">day</span><span class="p">,</span><span class="w"> </span><span class="n">hour</span><span class="p">,</span><span class="w"> </span><span class="s2">" &gt;CONTROL"</span><span class="p">)</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"echo 1 &gt;&gt;CONTROL"</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"echo"</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span><span class="w"> </span><span class="n">lon</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="s2">" &gt;&gt;CONTROL"</span><span class="p">)</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"echo "</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w"> </span><span class="n">hours</span><span class="p">,</span><span class="w"> </span><span class="s2">" &gt;&gt;CONTROL"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"echo 0 &gt;&gt;CONTROL
+    echo 10000.0 &gt;&gt;CONTROL
+    echo 3 &gt;&gt;CONTROL"</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="c1">## processing always assumes 3 months of met for consistent tdump files</span><span class="w">
+    </span><span class="n">months</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="s2">"%m"</span><span class="p">)))</span><span class="w">
+    </span><span class="n">months</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">months</span><span class="p">,</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">)</span><span class="w">
+    </span><span class="n">months</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">## to make sure we get the start of the previous year</span><span class="w">
+    </span><span class="n">months</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">months</span><span class="p">[</span><span class="n">months</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">12</span><span class="p">]</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">months</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">months</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">months</span><span class="p">)</span><span class="w">
+    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span><span class="w">
+      </span><span class="n">add.met</span><span class="p">(</span><span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"echo ./ &gt;&gt;CONTROL"</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"echo tdump"</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="n">day</span><span class="p">,</span><span class="w"> </span><span class="n">hour</span><span class="p">,</span><span class="w"> </span><span class="s2">" &gt;&gt;CONTROL"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"C:\\hysplit4\\exec\\hyts_std"</span><span class="w">
+    </span><span class="n">write.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bat.file</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w">
+                </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="c1">## run the file</span><span class="w">
+    </span><span class="n">system</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">hy.path</span><span class="p">,</span><span class="w"> </span><span class="s1">'working\\test.bat'</span><span class="p">))</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="c1">## combine files and make data frame</span><span class="w">
+  </span><span class="n">traj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.files</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span><span class="w"> </span><span class="n">hy.path</span><span class="p">)</span><span class="w">
+  </span><span class="c1">## write R object to file</span><span class="w">
+  </span><span class="n">file.name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="s2">".RData"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="n">save</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file.name</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2009</span><span class="o">:</span><span class="m">2020</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">### Change the date in</span><span class="w">
+  </span><span class="n">procTraj</span><span class="p">(</span><span class="n">lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">51.5</span><span class="p">,</span><span class="w"> </span><span class="n">lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-0.2</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w">
+           </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"London"</span><span class="p">,</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">72</span><span class="p">,</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w">
+           </span><span class="n">met</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"D:\\Hysplit\\TrajData\\"</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"D:\\Hysplit\\TrajProc\\"</span><span class="p">,</span><span class="w">
+           </span><span class="n">hy.path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\\hysplit4\\"</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="useful-links">Useful links</h3>
+
+<ul>
+  <li><a href="https://bookdown.org/david_carslaw/openair/appendix-hysplit.html">https://bookdown.org/david_carslaw/openair/appendix-hysplit.html</a></li>
+</ul>
+
+  </div>
+  
+</div>
+<script type="text/javascript" src="/static/js/blog.js?t=20221216225644"></script>
+<script type="text/javascript" src="/static/js/search.js?t=20221216225644"></script>
+<!-- Valine -->
+
+<hr style="visibility: hidden;">
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+<script src="/static/js/Valine.min.js"></script>
+<div id="vcomments"></div>
+<script>
+	new Valine({
+		el: '#vcomments',
+		lang: 'en',
+		serverURLs: 'https://xrrro58n.api.lncldglobal.com',
+		appId: 'xrRRo58nrl4YV9rUeNOePKr9-MdYXbMMI',
+		appKey: '90tIVi6XRevzSAzvojiOKwlR',
+		placeholder: 'Comment here',
+		avatar: 'mp',
+		visitor: 'true',
+		master: 'b8d6b6976b3ec45bccc6aa9816c40db7',
+		requiredFields: ['mail'],
+		enableQQ: 'true'
+	});
+</script>
+
+
+<footer class="footer">
+  <span>© CC BY-NC-SA 4.0</span>
+  | <a href="/static/xml/rss.xml">RSS</a>
+  
+</footer>
+<div id="to-top">
+  <span></span>
+  <span></span>
+</div>
+</body>
+</html>

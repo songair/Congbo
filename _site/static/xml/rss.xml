@@ -3,15 +3,60 @@
   <channel>
     <title>Congbo Song</title>
     <link>https://congbo.site</link>
-    <description>Congbo's Blog</description>
+    <description>Congbo Song</description>
     <language>en</language>
-    <pubDate>Thu, 20 Jan 2022 22:55:14 +0000</pubDate>
-    <lastBuildDate>Thu, 20 Jan 2022 22:55:14 +0000</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2022 22:56:44 +0000</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2022 22:56:44 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     <atom:link href="https://congbo.site/static/xml/rss.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>CCN data analysis</title>
+      <link>https://congbo.site/posts/2022/07/22/CCN.html</link>
+      <description>Combine CCN data
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+import os
+...</description>
+      <pubDate>Fri, 22 Jul 2022 00:00:00 +0100</pubDate>
+      <gui>https://congbo.site/posts/2022/07/22/CCN.html</gui>
+    </item>
+    <item>
+      <title>Machine Learning and Synthetic Control</title>
+      <link>https://congbo.site/posts/2022/07/17/synthetic.html</link>
+      <description>Data and codes will be available in this post shortly upon acceptance of the manuscript.
+</description>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0100</pubDate>
+      <gui>https://congbo.site/posts/2022/07/17/synthetic.html</gui>
+    </item>
+    <item>
+      <title>Back Trajectory Using HYSPLIT</title>
+      <link>https://congbo.site/posts/2022/07/17/hysplit.html</link>
+      <description>Install the Hysplit model into the computer
+
+  
+    Install TCL: https://www.ready.noaa.gov/HYSPLIT_util.php
+  
+  
+  ...</description>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0100</pubDate>
+      <gui>https://congbo.site/posts/2022/07/17/hysplit.html</gui>
+    </item>
+    <item>
+      <title>Meteorological data sources</title>
+      <link>https://congbo.site/posts/2022/07/15/met.html</link>
+      <description>Meteorological Data for HYSPLIT
+
+  Gridded Meteorological Data archives: https://www.ready.noaa.gov/archives.php
+  Ar...</description>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0100</pubDate>
+      <gui>https://congbo.site/posts/2022/07/15/met.html</gui>
+    </item>
+    <item>
       <title>Chemicals and gas bottles for SEANA Cruise</title>
-      <link>https://congbo.site/posts/2022/01/20/Chemicals-and-gas-bottles-for-Cruise.html</link>
+      <link>https://congbo.site/posts/2022/01/20/chemical.html</link>
       <description>Chemicals
 
 
@@ -28,11 +73,11 @@
       CPC
       ...</description>
       <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
-      <gui>https://congbo.site/posts/2022/01/20/Chemicals-and-gas-bottles-for-Cruise.html</gui>
+      <gui>https://congbo.site/posts/2022/01/20/chemical.html</gui>
     </item>
     <item>
       <title>HCHO, N2O5 monitors from Peking Uni.</title>
-      <link>https://congbo.site/posts/2022/01/19/HCHO-monitor-from-Peking-Uni.html</link>
+      <link>https://congbo.site/posts/2022/01/19/hcho.html</link>
       <description>Instruments from Peking University during the SEANA Cruise
 
 
@@ -44,11 +89,11 @@
       j-values
    ...</description>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      <gui>https://congbo.site/posts/2022/01/19/HCHO-monitor-from-Peking-Uni.html</gui>
+      <gui>https://congbo.site/posts/2022/01/19/hcho.html</gui>
     </item>
     <item>
       <title>机器学习与灰霾污染</title>
-      <link>https://congbo.site/posts/2022/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%81%B0%E9%9C%BE%E6%B1%A1%E6%9F%93.html</link>
+      <link>https://congbo.site/posts/2022/01/16/ml.html</link>
       <description> 
 
   可解释的机器学习技术量化灰霾污染的驱动因素
@@ -60,11 +105,11 @@
 
 南开大学冯银厂教授团队：E...</description>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      <gui>https://congbo.site/posts/2022/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%81%B0%E9%9C%BE%E6%B1%A1%E6%9F%93.html</gui>
+      <gui>https://congbo.site/posts/2022/01/16/ml.html</gui>
     </item>
     <item>
       <title>Casual inference and air quality</title>
-      <link>https://congbo.site/posts/2022/01/12/Casual-inference-and-air-quality.html</link>
+      <link>https://congbo.site/posts/2022/01/12/casual.html</link>
       <description>
 
 
@@ -72,11 +117,11 @@
 
 </description>
       <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
-      <gui>https://congbo.site/posts/2022/01/12/Casual-inference-and-air-quality.html</gui>
+      <gui>https://congbo.site/posts/2022/01/12/casual.html</gui>
     </item>
     <item>
       <title>本地测试Github Pages静态网页</title>
-      <link>https://congbo.site/posts/2022/01/09/%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95Github-Pages%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5.html</link>
+      <link>https://congbo.site/posts/2022/01/09/pages.html</link>
       <description>安装Jekyll并开启本地服务
 
 
@@ -84,11 +129,11 @@
   检查是否有Ruby 2.1.0 以上版本：ruby -v
   如果没有Ruby...</description>
       <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
-      <gui>https://congbo.site/posts/2022/01/09/%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95Github-Pages%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5.html</gui>
+      <gui>https://congbo.site/posts/2022/01/09/pages.html</gui>
     </item>
     <item>
       <title>Special issue in Atmosphere</title>
-      <link>https://congbo.site/posts/2022/01/09/Special-issue-of-Atmosphere.html</link>
+      <link>https://congbo.site/posts/2022/01/09/atmos.html</link>
       <description>
 https://www.mdpi.com/si/105493
 
@@ -96,7 +141,7 @@ Dear Colleagues,
 
 Air pollution ranked the fourth largest risk factor in terms of hu...</description>
       <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
-      <gui>https://congbo.site/posts/2022/01/09/Special-issue-of-Atmosphere.html</gui>
+      <gui>https://congbo.site/posts/2022/01/09/atmos.html</gui>
     </item>
   </channel>
 </rss>

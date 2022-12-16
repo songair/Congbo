@@ -1,5 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ul>
+  <li>Combine CCN data
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+import os
+from pandas.plotting import scatter_matrix
+from scipy import stats, integrate
+import seaborn as sns
+from pylab import savefig
+%matplotlib inline
+
+
+os.chdir(r'XXX')
+Filenames=[];
+for files in os.listdir('.'):
+    if files.startswith('CCN 100 data'):
+        Filenames.append(files)
+
+def Getfile(fnombre):
+  df=pd.read_csv(fnombre,skiprows=4)
+  df['Date']=pd.read_csv(fnombre,nrows=2).iloc[0,1]
+  df.columns=list(pd.Series(list(df.columns)).str.strip(' '))
+  df['Datetime']=pd.to_datetime(df['Date'].astype('str')+' '+df['Time'].astype('str'))
+  del df['Date']
+  del df['Time']
+  return df
+df_list=[Getfile(fname) for fname in Filenames];
+big_df=pd.concat(df_list)
+
+
+big_df=big_df.rename(columns={'Datetime':'Time'})
+big_df['Time']=big_df['Time'].dt.strftime('%Y-%m-%d %H:%M:%S')
+big_df=big_df.set_index('Time')
+big_df.index=pd.to_datetime(big_df.index)
+big_df=big_df.sort_index()
+big_df.to_csv('CCNdata.csv',encoding='utf-8')
+
+
+Dropping the first 5-min data for each supersaturation
+
+import time, datetime
+from datetime import datetime, timedelta
+dfa=big_df[['Current SS','CCN Number Conc']]
+dfa['SS']=dfa['Current SS'].shift(+1)
+dfa['SS_Delta']=dfa['Current SS']-dfa['SS']
+dfad=dfa.copy()
+dfac=dfa[dfa['SS_Delta']!=0]
+for i in np.arange(len(dfac)):
+    a=dfac.index[i]
+    b=a+timedelta(minutes = 5)
+    dfad=dfad[~((dfad.index&gt;=a)&amp;(dfad.index&lt;=b))]
+
+
+dfad=dfad[['Current SS','CCN Number Conc']]
+dfad.reset_index().pivot_table(index='Time',columns='Current SS',aggfunc='mean')['CCN Number Conc'].resample('5min').mean().to_csv('CCN_5min.csv')
+dfad.reset_index().pivot_table(index='Time',columns='Current SS',aggfunc='mean')['CCN Number Conc'].resample('1H').mean().to_csv('CCN_1H.csv')
+
+</li>
+  <li>Data and codes will be available in this post shortly upon acceptance of the manuscript.
+</li>
+  <li>Install the Hysplit model into the computer
+
+  
+    Install TCL: https://www.ready.noaa.gov/HYSPLIT_util.php
+  
+  
+    Install HYSPLIT: https://www.ready.noaa.gov/HYSPLIT_hytrial.php
+  
+  
+    Using TCL to open HYSPLIT
+  
+
+
+Using R codes to run HYSPLIT
+library (openair)
+library(lubridate)
+library(latticeExtra)
+dataDir="D:\\Hysplit"
+setwd(dataDir)  ### Set the working directory
+
+hy.path&lt;-"c:\\hysplit4\\"         ### Install the Hysplit model into the computer
+read.files &lt;- function(hours = 96, hy.path) {
+  ## find tdump files
+  files &lt;- Sys.glob("tdump*")
+  output &lt;- file('Rcombined.txt', 'w')
+  ## read through them all, ignoring 1st 7 lines
+  for (i in files){
+    input &lt;- readLines(i)
+    input &lt;- input[-c(1:7)] # delete header
+    writeLines(input, output)
+  }
+  close(output)
+    traj &lt;- read.table(paste0(hy.path, "working\\Rcombined.txt"), header = FALSE)
+  traj &lt;- subset(traj, select = -c(V2, V7, V8))
+  traj &lt;- rename(traj, c(V1 = "receptor", V3 = "year", V4 = "month", V5 = "day",
+                         V6 = "hour", V9 = "hour.inc", V10 = "lat", V11 = "lon",
+                         V12 = "height", V13 = "pressure"))
+  ## hysplit uses 2-digit years ...
+  year &lt;- traj$year[1]
+  if (year &lt; 50) traj$year &lt;- traj$year + 2000 else traj$year &lt;- traj$year + 1900
+  traj$date2 &lt;- with(traj, ISOdatetime(year, month, day, hour, min = 0, sec = 0,
+                                       tz = "GMT"))
+  ## arrival time
+  traj$date &lt;- traj$date2 - 3600 * traj$hour.inc
+  traj
+}
+
+
+add.met &lt;- function(month, Year, met, bat.file) {
+  ## if month is one, need previous year and month = 12
+  if (month == 0) {
+    month &lt;- 12
+    Year &lt;- as.numeric(Year) - 1
+  }
+  if (month &lt; 10) month &lt;- paste("0", month, sep = "")
+  ## add first line
+  write.table(paste("echo", met, " &gt;&gt;CONTROL"),
+              bat.file, col.names = FALSE,
+              row.names = FALSE, quote = FALSE, append = TRUE)
+  x &lt;- paste("echo RP", Year, month, ".gbl &gt;&gt;CONTROL", sep = "")
+  write.table(x, bat.file, col.names = FALSE,
+              row.names = FALSE, quote = FALSE, append = TRUE)
+}
+
+
+procTraj &lt;- function(lat = 48.9, lon = 2.2, year = 2019, name = "paris",
+                     met = "D:\\Hysplit\\TrajData\\", out = "D:\\Hysplit\\TrajProc\\",
+                     hours = 24, height = 100, hy.path = "C:\\hysplit4\\") {
+  ## hours is the back trajectory time e.g. 96 = 4-day back trajectory
+  ## height is start height (m)
+  lapply(c("openair", "plyr", "reshape2"), require, character.only = TRUE)
+  ## function to run 12 months of trajectories
+  ## assumes 96 hour back trajectories, 1 receptor
+  setwd(paste0(hy.path, "working\\"))
+  ## remove existing "tdump" files
+  path.files &lt;- paste0(hy.path, "working\\")
+  bat.file &lt;- paste0(hy.path, "working\\test.bat") ## name of BAT file to add to/run
+  files &lt;- list.files(path = path.files, pattern = "tdump")
+  lapply(files, function(x) file.remove(x))
+  start &lt;- paste(year, "-01-01", sep = "")
+  end &lt;- paste(year, "-12-31 23:00", sep = "")
+  dates &lt;- seq(as.POSIXct(start, "GMT"), as.POSIXct(end, "GMT"), by = "1 hour")
+  for (i in 1:length(dates)) {
+    year &lt;- format(dates[i], "%y")
+    Year &lt;- format(dates[i], "%Y") # long format
+    month &lt;- format(dates[i], "%m")
+    day &lt;- format(dates[i], "%d")
+    hour &lt;- format(dates[i], "%H")
+    x &lt;- paste("echo", year, month, day, hour, " &gt;CONTROL")
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE)
+    x &lt;- "echo 1 &gt;&gt;CONTROL"
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    x &lt;- paste("echo", lat, lon, height, " &gt;&gt;CONTROL")
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    x &lt;- paste("echo ", "-", hours, " &gt;&gt;CONTROL", sep = "")
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    x &lt;- "echo 0 &gt;&gt;CONTROL
+    echo 10000.0 &gt;&gt;CONTROL
+    echo 3 &gt;&gt;CONTROL"
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    ## processing always assumes 3 months of met for consistent tdump files
+    months &lt;- as.numeric(unique(format(dates[i], "%m")))
+    months &lt;- c(months, months + 1:2)
+    months &lt;- months - 1 ## to make sure we get the start of the previous year
+    months &lt;- months[months &lt;= 12]
+    if (length(months) == 2) months &lt;- c(min(months) - 1, months)
+    for (i in 1:3)
+      add.met(months[i], year, met, bat.file)
+    x &lt;- "echo ./ &gt;&gt;CONTROL"
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    x &lt;- paste("echo tdump", year, month, day, hour, " &gt;&gt;CONTROL", sep = "")
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    x &lt;- "C:\\hysplit4\\exec\\hyts_std"
+    write.table(x, bat.file, col.names = FALSE,
+                row.names = FALSE, quote = FALSE, append = TRUE)
+    ## run the file
+    system(paste0(hy.path, 'working\\test.bat'))
+  }
+  ## combine files and make data frame
+  traj &lt;- read.files(hours, hy.path)
+  ## write R object to file
+  file.name &lt;- paste(out, name, Year, ".RData", sep = "")
+  save(traj, file = file.name)
+}
+
+
+for (i in 2009:2020) {    ### Change the date in
+  procTraj(lat = 51.5, lon = -0.2, year = i,
+           name = "London", hours = 72,height = 100,
+           met = "D:\\Hysplit\\TrajData\\", out = "D:\\Hysplit\\TrajProc\\",
+           hy.path = "C:\\hysplit4\\") }
+
+
+Useful links
+
+
+  https://bookdown.org/david_carslaw/openair/appendix-hysplit.html
+
+</li>
+  <li>Meteorological Data for HYSPLIT
+
+  Gridded Meteorological Data archives: https://www.ready.noaa.gov/archives.php
+  Archived Model Graphics: https://www.ready.noaa.gov/READYamet.php
+  NOAA/ESRL Radiosonde Database: https://ruc.noaa.gov/raobs/
+  FTP address: ftp://arlftp.arlhq.noaa.gov/archives/
+
+
+# R codes
+library (openair)
+dataDir="xxx" ### Your working directory
+setwd(dataDir)  ### Set the working directory
+workingDirectory&lt;-dataDir  ### Shortcut for the working directory
+getMet &lt;- function (year = 2021:2022, month = 1:12, path_met = dataDir) {
+  for (i in seq_along(year)) {
+    for (j in seq_along(month)) {
+      download.file(url = paste0("ftp://arlftp.arlhq.noaa.gov/archives/reanalysis/RP",
+                                 year[i], sprintf("%02d", month[j]), ".gbl"),
+                    destfile = paste0(path_met, "RP", year[i],
+                                      sprintf("%02d", month[j]), ".gbl"), mode = "wb")}}}
+getMet(year = 2022:2022, month = 1:12, path_met = dataDir) ### GET data for sepecific time
+
+
+Hourly/Sub-Hourly Observations Data
+
+  GIS Platform: https://www.ncei.noaa.gov/maps/hourly/
+  FTP address: ftp://ftp.ncdc.noaa.gov/pub/data/noaa/
+
+
+# R codes
+library(worldmet)
+dataDir="xxx" ### Your working directory
+setwd(dataDir)
+info &lt;- getMeta(lat = 40, lon = 116.9) ### Set the position of interest
+dat &lt;- importNOAA(code = "545110-99999", year = 2015:2019) ## Find the code of the meteorological station and datetime ranges
+write.csv(dat,'BeijingMet.csv') ### Set filename
+
+
+ERA5 hourly data on single levels from 1959 to present
+
+  Website: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview
+
+
+# python codes
+import netCDF4 as nc
+from netCDF4 import Dataset
+import pandas as pd
+import numpy as np
+import os
+dataDir="xxx" ### specify working Directory
+xn="ERA5_renalysis.nc" ### specify filename of the .nc file
+os.chdir(dataDir)
+
+
+# python codes
+f=Dataset(xn)
+for i in f.variables.keys():
+    print(i)
+
+
+# python codes
+def closest(lst, K):  
+     lst = np.asarray(lst)
+     idx = (np.abs(lst - K)).argmin()
+     return lst[idx]
+
+
+# python codes
+av=closest(list(f.variables['latitude'][:]),51.15) ###latitude is 51.15
+bv=closest(list(f.variables['longitude'][:]),-1.44) ###longitude is -1.44
+a=list(f.variables['latitude'][:]).index(av)
+b=list(f.variables['longitude'][:]).index(bv)
+
+
+# python codes
+timezone=0
+dtime = netCDF4.num2date(f.variables['time'][:],f.variables['time'].units,calendar=f.variables['time'].calendar)
+nptimes = dtime.astype('datetime64[ns]')
+atm=pd.DataFrame(index=np.array(dtime),
+                 data={'ssr':f.variables['ssr'][:,:,a,b][~f.variables['ssr'][:,:,a,b].mask],
+                              'tp':f.variables['tp'][:,:,a,b][~f.variables['tp'][:,:,a,b].mask]})
+atm['blh']=np.nan
+atm['tcc']=np.nan
+atm['sp']=np.nan
+atm['blh'].iloc[:-2]=f.variables['blh'][:,:,a,b][~f.variables['blh'][:,:,a,b].mask] ## Check number of NAN values for the last records [:-2]
+atm['tcc'].iloc[:-2]=f.variables['tcc'][:,:,a,b][~f.variables['tcc'][:,:,a,b].mask]
+atm['sp'].iloc[:-2]=f.variables['sp'][:,:,a,b][~f.variables['sp'][:,:,a,b].mask]
+atm.index.name='date'
+atm.index=atm.index.astype('datetime64[ns]')
+atm=atm.sort_index()
+atm.to_csv("NETCDF_data.csv")
+
+The data can be four dimension: f.variables[‘blh’][:,:,a,b] or three dimension: f.variables[‘blh’][:,a,b]
+
+Useful links
+
+  https://github.com/sonnymetvn/Basic-Python-for-Meteorology/tree/main/notebook
+  https://cran.r-project.org/web/packages/ecmwfr/
+  https://cran.r-project.org/web/packages/ecmwfr/vignettes/cds_vignette.html
+
+</li>
   <li>Chemicals
 
 
@@ -811,14 +1120,13 @@ Size: 550mm * 430mm * 280mm
 本研究受国家自然科学基金项目（42177085）、天津市科技计划项目（PTZWHZ00120）以及中国工程院院地合作项目（2020C0-0002）资助。
 
 出版信息：
-Environ. Sci. Technol. Letters. 2022, ASAP 
+Environ. Sci. Technol. Letters. 2022, ASAP
 Publication Date: January 4, 2022
 &lt;https://doi.org/10.1021/acs.estlett.1c00865&gt;
 Copyright © 2022 American Chemical Society
 
 
 原文链接：https://pubs.acs.org/doi/abs/10.1021/acs.estlett.1c00865
-
 </li>
   <li>
 
@@ -870,6 +1178,5 @@ Dr. Congbo Song
 Dr. Qili Dai
 Dr. Deepchandra Srivastava
 Guest Editors
-
 </li>
 </ul>

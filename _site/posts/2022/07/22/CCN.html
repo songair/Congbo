@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CCN data analysis | Congbo Song</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="author" content="Congbo Song" />
+  <meta name="description" content="CCN data analysis"/>
+  <meta name="keywords" content="Congbo Song,Tutorial"/>
+  <link rel="icon" href="/static/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/static/img/logo.png" />
+  <link rel="stylesheet" href="/static/css/common.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/post.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/code-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/code-light.css?t=20221216225644">
+  <link rel="prefetch" href="/static/xml/search.xml?t=20221216225644">
+  <link rel="prefetch" href="/static/js/search.js?t=20221216225644">
+  <script>
+    window.blog = {
+      baseurl:"",
+      buildAt:"20221216225644",
+      darkTheme: false,
+      setDarkTheme: function (dark) {
+        this.darkTheme = Boolean(dark);
+        document.documentElement.className = this.darkTheme ? 'dark': '';
+        document.querySelector('meta[name=theme-color]').setAttribute('content', this.darkTheme ? '#2D2E32': '#FFFFFF');
+      }
+    }
+    if (sessionStorage.darkTheme !== undefined) {
+      blog.setDarkTheme(sessionStorage.darkTheme === 'true'); // 记忆值，单个窗口内有效
+    } else {
+      blog.setDarkTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); // 跟随系统
+    }
+    if (window.matchMedia) {
+      var media = window.matchMedia('(prefers-color-scheme: dark)');
+      media.addListener(function (ev) {
+        blog.setDarkTheme(ev.currentTarget.matches);
+        sessionStorage.removeItem('darkTheme');
+      });
+    }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  
+</head>
+<body ondragstart="return false;">
+<header class="header">
+  <img class="logo" src="/static/img/logo.jpg" alt="logo"/>
+  <nav class="menu">
+    <a href="/"  class="hover-underline">About me</a>
+    <a href="/pages/post.html"  class="hover-underline">Blog</a>
+    <a href="/pages/tags.html"  class="hover-underline">Tags</a>
+    <a href="/pages/search.html"  class="hover-underline">Search</a>
+    <a href="/pages/pubs.html"  class="hover-underline">Pubs</a>
+    <a href="/pages/cv.html"  class="hover-underline">CV</a>
+    <a href="/pages/contact.html"  class="hover-underline">Contact</a>
+    </nav>
+</header>
+<div class="page page-post" data-spy="scroll" data-target=".toc" data-offset="20">
+  <h1 class="title" id="CCN data analysis">CCN data analysis</h1>
+  
+  <div class="subtitle">Posted on Jul 22, 2022</div>
+  
+  
+  <div class="post">
+    <h3 id="combine-ccn-data">Combine CCN data</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">scatter_matrix</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span><span class="p">,</span> <span class="n">integrate</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">savefig</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s">r'XXX'</span><span class="p">)</span>
+<span class="n">Filenames</span><span class="o">=</span><span class="p">[];</span>
+<span class="k">for</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">'.'</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">files</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'CCN 100 data'</span><span class="p">):</span>
+        <span class="n">Filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">Getfile</span><span class="p">(</span><span class="n">fnombre</span><span class="p">):</span>
+  <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fnombre</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+  <span class="n">df</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fnombre</span><span class="p">,</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span><span class="o">.</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span>
+  <span class="n">df</span><span class="p">[</span><span class="s">'Datetime'</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'str'</span><span class="p">)</span><span class="o">+</span><span class="s">' '</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s">'Time'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'str'</span><span class="p">))</span>
+  <span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]</span>
+  <span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s">'Time'</span><span class="p">]</span>
+  <span class="k">return</span> <span class="n">df</span>
+<span class="n">df_list</span><span class="o">=</span><span class="p">[</span><span class="n">Getfile</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">Filenames</span><span class="p">];</span>
+<span class="n">big_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">df_list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">big_df</span><span class="o">=</span><span class="n">big_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s">'Datetime'</span><span class="p">:</span><span class="s">'Time'</span><span class="p">})</span>
+<span class="n">big_df</span><span class="p">[</span><span class="s">'Time'</span><span class="p">]</span><span class="o">=</span><span class="n">big_df</span><span class="p">[</span><span class="s">'Time'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d </span><span class="si">%</span><span class="s">H:</span><span class="si">%</span><span class="s">M:</span><span class="si">%</span><span class="s">S'</span><span class="p">)</span>
+<span class="n">big_df</span><span class="o">=</span><span class="n">big_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">'Time'</span><span class="p">)</span>
+<span class="n">big_df</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">big_df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">big_df</span><span class="o">=</span><span class="n">big_df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">big_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">'CCNdata.csv'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="dropping-the-first-5-min-data-for-each-supersaturation">Dropping the first 5-min data for each supersaturation</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span><span class="p">,</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="n">dfa</span><span class="o">=</span><span class="n">big_df</span><span class="p">[[</span><span class="s">'Current SS'</span><span class="p">,</span><span class="s">'CCN Number Conc'</span><span class="p">]]</span>
+<span class="n">dfa</span><span class="p">[</span><span class="s">'SS'</span><span class="p">]</span><span class="o">=</span><span class="n">dfa</span><span class="p">[</span><span class="s">'Current SS'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dfa</span><span class="p">[</span><span class="s">'SS_Delta'</span><span class="p">]</span><span class="o">=</span><span class="n">dfa</span><span class="p">[</span><span class="s">'Current SS'</span><span class="p">]</span><span class="o">-</span><span class="n">dfa</span><span class="p">[</span><span class="s">'SS'</span><span class="p">]</span>
+<span class="n">dfad</span><span class="o">=</span><span class="n">dfa</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dfac</span><span class="o">=</span><span class="n">dfa</span><span class="p">[</span><span class="n">dfa</span><span class="p">[</span><span class="s">'SS_Delta'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dfac</span><span class="p">)):</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">dfac</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">dfad</span><span class="o">=</span><span class="n">dfad</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">dfad</span><span class="o">.</span><span class="n">index</span><span class="o">&gt;=</span><span class="n">a</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">dfad</span><span class="o">.</span><span class="n">index</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">))]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dfad</span><span class="o">=</span><span class="n">dfad</span><span class="p">[[</span><span class="s">'Current SS'</span><span class="p">,</span><span class="s">'CCN Number Conc'</span><span class="p">]]</span>
+<span class="n">dfad</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s">'Time'</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s">'Current SS'</span><span class="p">,</span><span class="n">aggfunc</span><span class="o">=</span><span class="s">'mean'</span><span class="p">)[</span><span class="s">'CCN Number Conc'</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s">'5min'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">'CCN_5min.csv'</span><span class="p">)</span>
+<span class="n">dfad</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s">'Time'</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s">'Current SS'</span><span class="p">,</span><span class="n">aggfunc</span><span class="o">=</span><span class="s">'mean'</span><span class="p">)[</span><span class="s">'CCN Number Conc'</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s">'1H'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">'CCN_1H.csv'</span><span class="p">)</span>
+</code></pre></div></div>
+
+  </div>
+  
+</div>
+<script type="text/javascript" src="/static/js/blog.js?t=20221216225644"></script>
+<script type="text/javascript" src="/static/js/search.js?t=20221216225644"></script>
+<!-- Valine -->
+
+<hr style="visibility: hidden;">
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+<script src="/static/js/Valine.min.js"></script>
+<div id="vcomments"></div>
+<script>
+	new Valine({
+		el: '#vcomments',
+		lang: 'en',
+		serverURLs: 'https://xrrro58n.api.lncldglobal.com',
+		appId: 'xrRRo58nrl4YV9rUeNOePKr9-MdYXbMMI',
+		appKey: '90tIVi6XRevzSAzvojiOKwlR',
+		placeholder: 'Comment here',
+		avatar: 'mp',
+		visitor: 'true',
+		master: 'b8d6b6976b3ec45bccc6aa9816c40db7',
+		requiredFields: ['mail'],
+		enableQQ: 'true'
+	});
+</script>
+
+
+<footer class="footer">
+  <span>© CC BY-NC-SA 4.0</span>
+  | <a href="/static/xml/rss.xml">RSS</a>
+  
+</footer>
+<div id="to-top">
+  <span></span>
+  <span></span>
+</div>
+</body>
+</html>

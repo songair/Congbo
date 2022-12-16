@@ -11,19 +11,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="applicable-device" content="pc,mobile">
   <meta name="author" content="Congbo Song" />
-  <meta name="description" content="Congbo's Blog"/>
+  <meta name="description" content="Congbo Song"/>
   <meta name="keywords" content="Congbo Song, 宋从波, Congbo, Source emissions, Source apportionment, Atmospheric, Air pollution, Air quality, Clean air, Machine learning, intervention"/>
   <link rel="icon" href="/static/img/favicon.ico" />
   <link rel="apple-touch-icon" href="/static/img/logo.png" />
-  <link rel="stylesheet" href="/static/css/common.css?t=20220120225514">
-  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20220120225514">
-  <link rel="stylesheet" href="/static/css/page.css?t=20220120225514">
-  <link rel="prefetch" href="/static/xml/search.xml?t=20220120225514">
-  <link rel="prefetch" href="/static/js/search.js?t=20220120225514">
+  <link rel="stylesheet" href="/static/css/common.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20221216225644">
+  <link rel="stylesheet" href="/static/css/page.css?t=20221216225644">
+  <link rel="prefetch" href="/static/xml/search.xml?t=20221216225644">
+  <link rel="prefetch" href="/static/js/search.js?t=20221216225644">
   <script>
     window.blog = {
       baseurl:"",
-      buildAt:"20220120225514",
+      buildAt:"20221216225644",
       darkTheme: false,
       setDarkTheme: function (dark) {
         this.darkTheme = Boolean(dark);
@@ -58,10 +58,11 @@
 <header class="header">
   <img class="logo" src="/static/img/logo.jpg" alt="logo"/>
   <nav class="menu">
-    <a href="/"  class="hover-underline">Blog</a>
+    <a href="/"  class="hover-underline">About me</a>
+    <a href="/pages/post.html"  class="hover-underline">Blog</a>
     <a href="/pages/tags.html"  class="hover-underline">Tags</a>
     <a href="/pages/search.html"  class="hover-underline">Search</a>
-    <a href="/pages/publications.html"  class="hover-underline">Publications</a>
+    <a href="/pages/pubs.html"  class="hover-underline">Pubs</a>
     <a href="/pages/cv.html"  class="hover-underline">CV</a>
     <a href="/pages/contact.html"  class="hover-underline">Contact</a>
     </nav>
@@ -70,19 +71,26 @@
   <div class="list-category">
     <h2>All tags</h2>
     <div>
-      <a href="javascript:document.getElementById('Ads').scrollIntoView()">Ads</a>
+      <a href="javascript:document.getElementById('Air Quality').scrollIntoView()">Air Quality</a>
       <a href="javascript:document.getElementById('Github').scrollIntoView()">Github</a>
-      <a href="javascript:document.getElementById('AQ').scrollIntoView()">AQ</a>
+      <a href="javascript:document.getElementById('Presentation').scrollIntoView()">Presentation</a>
       <a href="javascript:document.getElementById('SEANA').scrollIntoView()">SEANA</a>
+      <a href="javascript:document.getElementById('Tutorial').scrollIntoView()">Tutorial</a>
     </div>
   </div>
   <div class="list-post">
-    <h2 id="Ads">Ads</h2>
+    <h2 id="Air Quality">Air Quality</h2>
     <ul>
+      <li>
+        <span class="date">2022/01/16</span>
+        <div class="title">
+          <a href="/posts/2022/01/16/ml.html" class="hover-underline">机器学习与灰霾污染</a>
+        </div>
+      </li>
       <li>
         <span class="date">2022/01/09</span>
         <div class="title">
-          <a href="/posts/2022/01/09/Special-issue-of-Atmosphere.html" class="hover-underline">Special issue in Atmosphere</a>
+          <a href="/posts/2022/01/09/atmos.html" class="hover-underline">Special issue in Atmosphere</a>
         </div>
       </li>
     </ul>
@@ -93,24 +101,18 @@
       <li>
         <span class="date">2022/01/09</span>
         <div class="title">
-          <a href="/posts/2022/01/09/%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95Github-Pages%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5.html" class="hover-underline">本地测试Github Pages静态网页</a>
+          <a href="/posts/2022/01/09/pages.html" class="hover-underline">本地测试Github Pages静态网页</a>
         </div>
       </li>
     </ul>
   </div>
   <div class="list-post">
-    <h2 id="AQ">AQ</h2>
+    <h2 id="Presentation">Presentation</h2>
     <ul>
-      <li>
-        <span class="date">2022/01/16</span>
-        <div class="title">
-          <a href="/posts/2022/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%81%B0%E9%9C%BE%E6%B1%A1%E6%9F%93.html" class="hover-underline">机器学习与灰霾污染</a>
-        </div>
-      </li>
       <li>
         <span class="date">2022/01/12</span>
         <div class="title">
-          <a href="/posts/2022/01/12/Casual-inference-and-air-quality.html" class="hover-underline">Casual inference and air quality</a>
+          <a href="/posts/2022/01/12/casual.html" class="hover-underline">Casual inference and air quality</a>
         </div>
       </li>
     </ul>
@@ -121,28 +123,54 @@
       <li>
         <span class="date">2022/01/20</span>
         <div class="title">
-          <a href="/posts/2022/01/20/Chemicals-and-gas-bottles-for-Cruise.html" class="hover-underline">Chemicals and gas bottles for SEANA Cruise</a>
+          <a href="/posts/2022/01/20/chemical.html" class="hover-underline">Chemicals and gas bottles for SEANA Cruise</a>
         </div>
       </li>
       <li>
         <span class="date">2022/01/19</span>
         <div class="title">
-          <a href="/posts/2022/01/19/HCHO-monitor-from-Peking-Uni.html" class="hover-underline">HCHO, N2O5 monitors from Peking Uni.</a>
+          <a href="/posts/2022/01/19/hcho.html" class="hover-underline">HCHO, N2O5 monitors from Peking Uni.</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="list-post">
+    <h2 id="Tutorial">Tutorial</h2>
+    <ul>
+      <li>
+        <span class="date">2022/07/22</span>
+        <div class="title">
+          <a href="/posts/2022/07/22/CCN.html" class="hover-underline">CCN data analysis</a>
+        </div>
+      </li>
+      <li>
+        <span class="date">2022/07/17</span>
+        <div class="title">
+          <a href="/posts/2022/07/17/synthetic.html" class="hover-underline">Machine Learning and Synthetic Control</a>
+        </div>
+      </li>
+      <li>
+        <span class="date">2022/07/17</span>
+        <div class="title">
+          <a href="/posts/2022/07/17/hysplit.html" class="hover-underline">Back Trajectory Using HYSPLIT</a>
+        </div>
+      </li>
+      <li>
+        <span class="date">2022/07/15</span>
+        <div class="title">
+          <a href="/posts/2022/07/15/met.html" class="hover-underline">Meteorological data sources</a>
         </div>
       </li>
     </ul>
   </div>
 </div>
 
-<script type="text/javascript" src="/static/js/blog.js?t=20220120225514"></script>
-<script type="text/javascript" src="/static/js/search.js?t=20220120225514"></script>
+<script type="text/javascript" src="/static/js/blog.js?t=20221216225644"></script>
+<script type="text/javascript" src="/static/js/search.js?t=20221216225644"></script>
 
 <footer class="footer">
-  <span>© Congbo Song 2022</span>
-  | <a href="/static/xml/rss.xml">RSS</a> 
-  | <span>Theme By</span><a href="https://github.com/TMaize/tmaize-blog">TMaize</a>
-  
-      | <a href="https://github.com/songair/congbo">GitHub</a>
+  <span>© CC BY-NC-SA 4.0</span>
+  | <a href="/static/xml/rss.xml">RSS</a>
   
 </footer>
 <div id="to-top">

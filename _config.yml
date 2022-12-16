@@ -2,7 +2,7 @@ encoding: utf-8
 
 # SEO相关信息
 title: Congbo Song
-description: Congbo's Blog
+description: Congbo Song
 keywords: Congbo Song, 宋从波, Congbo, Source emissions, Source apportionment, Atmospheric, Air pollution, Air quality, Clean air, Machine learning, intervention
 author: Congbo Song
 footerText: '© CC BY-NC-SA 4.0'
@@ -28,14 +28,16 @@ sourcecode:
 # 可选字段 target: '_blank' 新页面打开
 
 menu:
-  - title: Blog
+  - title: About me
     url: /
+  - title: Blog
+    url: /pages/post.html
   - title: Tags
     url: /pages/tags.html
   - title: Search
     url: /pages/search.html
-  - title: Publications
-    url: /pages/publications.html
+  - title: Pubs
+    url: /pages/pubs.html
   - title: CV
     url: /pages/cv.html
   - title: Contact
