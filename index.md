@@ -10,6 +10,6 @@ I'm a <span style="color:blue">**[Senior Research Scientist](https://research.ma
 I'm a member of the **[Manchester Environmental Data Analytics Lab (MEDAL)](https://m-edal.github.io)**, with [Prof. David Topping](https://research.manchester.ac.uk/en/persons/david.topping) and [Dr. Zhonghua Zheng](https://zhonghuazheng.com).
 
 -------------
-"Stay hungry, stay foolish"- Steve Jobs\
-“A wise man can learn more from a foolish question than a fool can learn from a wise answer”- Bruce Lee\
-“You have to be hungry in order to savour the taste of success”- Harprateek Grewal
+*"Stay hungry, stay foolish"- Steve Jobs*\
+*“A wise man can learn more from a foolish question than a fool can learn from a wise answer”- Bruce Lee*\
+*“You have to be hungry in order to savour the taste of success”- Harprateek Grewal*
