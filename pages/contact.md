@@ -12,8 +12,8 @@ title: Contact
 
 Room 2.03, Simon building\
 University of Manchester\
-M13 9PL\
-Manchester\
+Oxford Road\
+Manchester, M13 9PL\
 United Kingdom
  
 > Email
