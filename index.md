@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Hello 你好
+title: Hello 你好!
 ---
 
 | <img src='/static/img/NCAS1.png' alt="NCAS logo" align='center' style='width: 530px'/>  | <img src='/static/img/Machester1.png' alt="University of Manchester logo" align='center' style='width: 300px'/> |
