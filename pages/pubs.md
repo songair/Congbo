@@ -5,6 +5,12 @@ title: Publications
 
 Update: 2022/12/15
 
+|working papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
+**Song, C.**<sup>*</sup>, Zhang, J., Tong, H., Xu, J., Shi, Z., Coe, H., and Mao, H.<sup>*</sup> (2022). Two-step Machine Learning Reveals Near-road Polycyclic Aromatic Hydrocarbons (PAHs) in Individual Particles from Biomass Burning, Coal Combustion and Vehicle Emissions.
+
+**Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2022). Attribution of air quality benefits to clean winter heating polices in China using a machine learning and causal inference approach. Environmental Science & Technology. (Submitted)
+
+
 |Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
 
 <!--
