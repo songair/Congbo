@@ -28,7 +28,7 @@ sourcecode:
 # 可选字段 target: '_blank' 新页面打开
 
 menu:
-  - title: About me
+  - title: About
     url: /
   - title: Blog
     url: /pages/post.html
@@ -36,8 +36,8 @@ menu:
     url: /pages/tags.html
   - title: Search
     url: /pages/search.html
-  - title: Pubs
-    url: /pages/pubs.html
+  - title: Papers
+    url: /pages/papers.html
   - title: CV
     url: /pages/cv.html
   - title: Contact
