@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Publication
+title: Publications
 ---
 
 Update: 2022/12/15
