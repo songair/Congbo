@@ -46,9 +46,9 @@ Dr. Song has authored and coauthored over thirty peer-reviewed papers since 2017
 
 ## Skills
 
-* Field measurements, such as tunnel tests, near-road measurements, ambient measurements, etc.
+* Field measurements, such as research cruise, tunnel tests, near-road measurements, ambient measurements, etc.
 * Integrating traffic data, meteorological data and pollutant data, and conducting statistical analysis and data mining.
-* Operating and data analysis of Single Particle Aerosol Mass Spectrometer (SPAMS), VOCs analyzer, Particle size spectrometers (APS and SMPS), Aethalometer, Cloud condensation nuclei (CCN), etc.
+* Operating and data analysis of Single Particle Aerosol Mass Spectrometer (SPAMS), VOCs analyzer, Particle size spectrometers (APS, SMPS, PSM and NAIS), Aethalometer, On-line metal elements (Xact), AiRRmonia, Cloud condensation nuclei (CCN), etc.
 * Ion Chromatography (IC) analysis, Organic carbon/elemental Carbon analysis, sulfate isotope analysis.
 * Receptor models (CMB, PMF, ME-2), machine learning techniques.
 * Programming languages, such as Matlab, Python, and R, etc.
