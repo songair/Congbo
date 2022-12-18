@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ul>
+  <li>On 12th December 2022, I took the position of a Senior Research Scientist Data Science and Analytics in Atmospheric Air Pollution, at The National Centre for Atmospheric Science (NCAS) based in the Department of Earth and Environmental Science, the University of Manchester.
+
+ 
+</li>
   <li>Combine CCN data
 
 import pandas as pd
