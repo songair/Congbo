@@ -70,13 +70,43 @@ valine:
 
 
 links:
-  - title: TMaize的个人博客
-    url: https://blog.tmaize.net
-  - title: tuanvvu
-    url: https://tuanvvu.github.io
-  - title: Yuqing
-    url: https://yuqingdai.xyz
+  - title: David Topping
+    url: https://davidtoppingsci.com
+    desc: A Wandering Scientist in the University of Manchester, Fellow of the Alan Turing Data Science Institute
+    header: https://davidtoppingsci.files.wordpress.com/2014/10/mer2d2.jpg?w=788&h=788
   - title: Zhonghua Zheng
     url: https://zhonghuazheng.com/
+    desc: Lecturer in the University of Manchester
+    header: https://zhonghuazheng.com/src/selfie.jpg
   - title: Manchester Environmental Data Analytics Lab (MEDAL)
     url: https://m-edal.github.io
+    desc: Data Analytics Lab in University of Manchester
+    header: https://m-edal.github.io/src/medal.jpg
+  - title: Clean Air Research Group of Zongbo Shi
+    url: https://clean-air-research.org.uk
+    desc: Clean Air Research Group website hosted by Professor Zongbo Shi at the University of Birmingham.
+    header: https://clean-air-research.org.uk/wp-content/uploads/Clean-Air-Research-Logo.png
+  - title: William (Bill) Bloss
+    url: https://clean-air-research.org.uk
+    desc: Professor of Atmospheric Science in University of Birmingham.
+    header: https://static.wixstatic.com/media/4cf9c9_0dd47aadf7064046a1a343aedb6a1e2b~mv2.jpg/v1/crop/x_0,y_58,w_1194,h_1205/fill/w_940,h_948,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4cf9c9_0dd47aadf7064046a1a343aedb6a1e2b~mv2.jpg
+  - title: TMaize的个人博客
+    url: https://blog.tmaize.net
+    desc: TMaize的个人博客
+    header: https://blog.tmaize.net/static/img/logo.jpg
+  - title: Dr Tuan Vu
+    url: https://tuanvvu.github.io
+    desc: Senior air quality scientist at Environmental Research Group, Imperial College London
+    header: https://tuanvvu.github.io/assets/images/bio-photo.jpg
+  - title: Yuqing Dai
+    url: https://yuqingdai.xyz
+    desc: Air quality modeller, street cannoy studies
+    header: https://yuqingdai.xyz/pics/common/bio.jpg
+  - title: Susan Athey
+    url: https://gsb-faculty.stanford.edu/susan-athey/
+    desc: The Economics of Technology Professor, Stanford Graduate School of Business
+    header: https://gsb-faculty.stanford.edu/susan-athey/files/2022/04/photo-faculty-athey-susan-1.jpg
+  - title: Song Xi Chen (陈松蹊) Group
+    url: https://www.songxichen.com
+    desc: Developing statistical methodologies and applications in Air Quality Assessment
+    header: https://www.songxichen.com/Uploads/user_photo/thumb_1490748596.jpg

@@ -2,36 +2,34 @@
 layout: mypost
 title: Contact
 ---
-> Name: Congbo Song / 宋从波, Pronouns: he/him
 
+
+## Name: Congbo Song / 宋从波, Pronouns: he/him 
 <img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100">
 
 <br clear="left"/>
 
-> Address
+## Address
 
-Room 2.03, Simon building\
-University of Manchester\
-Oxford Road\
-Manchester, M13 9PL\
-United Kingdom
+Room 2.03 | Simon building | University of Manchester| Oxford Road | Manchester, M13 9PL | United Kingdom
 
-> Email
+## Email
 
 <congbo.song@manchester.ac.uk>
 
-> Website
+## Website
 
-[Google Scholar](https://scholar.google.com/citations?user=JcL-uzcAAAAJ&hl=en);   [ResearchGate](https://www.researchgate.net/profile/Congbo-Song);  [ORCID](https://orcid.org/0000-0001-7948-4834);  [ResearcherID](https://publons.com/researcher/3024756/congbo-song/); [Scopus ID](https://www.scopus.com/authid/detail.uri?authorId=57192012559);\
+[Google Scholar](https://scholar.google.com/citations?user=JcL-uzcAAAAJ&hl=en);   [ResearchGate](https://www.researchgate.net/profile/Congbo-Song);  [ORCID](https://orcid.org/0000-0001-7948-4834);  [ResearcherID](https://publons.com/researcher/3024756/congbo-song/); [Scopus ID](https://www.scopus.com/authid/detail.uri?authorId=57192012559);<br />
 University profile page:[https://research.manchester.ac.uk/en/persons/congbo-song](https://research.manchester.ac.uk/en/persons/congbo-song)
 
->Link info
+## Link info
 ```
 * Title: {{ site.description }}
 * Website：{{ site.domainUrl }}{{ site.baseurl }}
 * Logo：{{ site.domainUrl }}{{ site.baseurl }}/static/img/logo.jpg
 ```
 
+<!--
 <ul>
   {%- for link in site.links %}
   <li>
@@ -39,6 +37,29 @@ University profile page:[https://research.manchester.ac.uk/en/persons/congbo-son
   </li>
   {%- endfor %}
 </ul>
+-->
+## Useful links
+<div style="display:flex;flex-direction:  column">
+  {%- for link in site.links %}
+    <div style="display:flex;width:100%;">
+      <div style="display:flex;width:100%;margin-bottom:16px;">
+        <div style="text-decoration: none;">
+          <a href="{{link.url}}" style="display: block;border-bottom:none;">
+          <img style="border:0px solid #f00;width:50px;height:50px;border-radius: 50%;" src="{{ link.header }}">
+          </a>
+        </div>
+        <div style="margin-left:12px;margin-top:0px;display:flex;flex-direction:column">
+          <p style="border:0px solid #000;height:28px;">
+            <a href="{{ link.url }}" title="{{ link.desc }}" target="_blank" >{{ link.title }}</a>
+          </p>
+          <div style="border:0px solid #000;font-size:12px;height:14px;">{{link.desc}}</div>
+          <!-- <div style="border:0px solid #000;font-size:12px;height:24px;">{{link.tag}}</div> -->
+        </div>
+      </div>
+    </div>
+  {%- endfor %}
+</div>
+
 
 {% include comment.html %}
 
