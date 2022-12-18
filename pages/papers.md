@@ -5,21 +5,24 @@ title: Publications
 
 Update: 2022/12/15
 
-|Working papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
+# Working papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
 
 **Song, C.**<sup>*</sup>, Zhang, J., Tong, H., Xu, J., Shi, Z., Coe, H., and Mao, H.<sup>*</sup> (2022). Two-step Machine Learning Reveals Near-road Polycyclic Aromatic Hydrocarbons (PAHs) in Individual Particles from Biomass Burning, Coal Combustion and Vehicle Emissions. (In preparation)
 
 **Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2022). Attribution of air quality benefits to clean winter heating polices in China using a machine learning and causal inference approach. Environmental Science & Technology. (Submitted)
 
 
-|Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
+# Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
+
+|[2017](#2017)|[2018](#2018)|[2019](#2019)|[2020](#2020)|[2021](#2021)|[2022](#2022)|[2023](#2023)|
 
 <!--
 | <span id="badgeCont131"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont131&rid=AAE-8183-2019&size=small"></script></span> |
 -->
 
 
-## 2022
+
+# 2022
 
 Brean, J., Beddows, D., Harrison, R., **Song, C.**, Tunved, P., Ström, I., Krejci., Radovan, Freud, E., Massling, Andreas., Skov H., Asmi E., Lupi, A., Dall’Osto, M. (2022). Collective geographical eco-regions and precursor sources driving Arctic new particle formation. Atmospheric Chemistry and Physics. <https://acp.copernicus.org/preprints/acp-2022-280/> (Accepted)
 
@@ -32,7 +35,7 @@ Xu, J.<sup>*</sup>, Harrison, R.M., **Song, C.**, Hou, S., Wei, L., Fu, P., Li, 
 
 Singh, A.<sup>*</sup>, Bartington, S.E., **Song, C.**, Ghaffarpasand, O., Kraftl, M., Shi, Z., Pope, F.D., Stacey, B., Hall, J., Thomas, G.N. and Bloss, W.J. (2022). Impacts of emergency health protection measures upon air quality, traffic and public health: evidence from Oxford, UK. Environmental Pollution, 293, p.118584. <https://doi.org/10.1016/j.envpol.2021.118584> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749121021667-main.pdf)]**
 
-## 2021
+# 2021
 
 Shi, Z.<sup>#1,*</sup>, **Song, C.**<sup>#1,*</sup>, Liu, B., Lu, G., Xu, J., Van Vu, T., Elliott, R., Li, W., Bloss, W., & Harrison, R. (2021). <span style="color:red;">Abrupt but smaller than expected changes in surface air quality attributable to COVID-19 lockdowns</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Science Advances, 7(3). <https://doi.org/10.1126/sciadv.abd6696> **[[pdf]({{site.baseurl}}/static/papers/sciadv.abd6696.pdf)]**
 
@@ -48,7 +51,7 @@ Luo, L., Zhu, R.-G., **Song, C.**, Peng, J.-F., Guo, W., Liu, Y., Zheng, N., Xia
 
 Wang, Y., Liu, B.<sup>*</sup>, Zhang, Y., Dai, Q., **Song, C.**, Duan, L., Guo, L., Zhao, J., Xue, Z., Bi, X., & Feng, Y. (2021). Potential health risks of inhaled toxic elements and risk sources during different covid-19 lockdown stages in linfen, China. Environmental Pollution, 284. <https://doi.org/10.1016/j.envpol.2021.117454>
 
-## 2020
+# 2020
 
 **Song, C.**, Liu, Y., Sun, L., Zhang, Q., & Mao, H.<sup>*</sup> (2020). <span style="color:red;">Emissions of volatile organic compounds (VOCs) from gasoline- and liquified natural gas (LNG)-fueled vehicles in tunnel studies</span>. Atmospheric Environment, 234. <https://doi.org/10.1016/j.atmosenv.2020.117626> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S1352231020303599-main.pdf)]**
 
@@ -64,7 +67,7 @@ Xu, L., Zhang, J., Sun, X., Xu, S., Shan, M., Yuan, Q., Liu, L., Du, Z., Liu, D.
 
 Zhang, J., Peng, J., **Song, C.**, Ma, C., Men, Z., Wu, J., Wu, L., Wang, T., Zhang, X., Tao, S., Gao, S., Hopke, P., & Mao, H.<sup>*</sup> (2020). Vehicular non-exhaust particulate emissions in chinese megacities: Source profiles, real-world emission factors, and inventories. Environmental Pollution, 266. <https://doi.org/10.1016/j.envpol.2020.115268>
 
-## 2019
+# 2019
 
 **Song, C.**, Liu, B., Dai, Q., Li, H., & Mao, H.<sup>*</sup> (2019). <span style="color:red;">Temperature dependence and source apportionment of volatile organic compounds (VOCs) at an urban site on the north China plain</span>. Atmospheric Environment, 207, 167–181. <https://doi.org/10.1016/j.atmosenv.2019.03.030> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S1352231019302018-main.pdf)]**[<span style="color:blue;">[One of the most cited articles from Atmospheric Environment published since 2018]</span>](https://www.journals.elsevier.com/atmospheric-environment/most-cited-articles)
 
@@ -74,7 +77,7 @@ Dai, Q., Bi, X.<sup>*</sup>, Song, W., Li, T., Liu, B., Ding, J., Xu, J., **Song
 
 Sun, L.-N., Liu, Y., Zhao, J.-B., Sun, S.-D., **Song, C.**, Zhang, J., Li, Y.-N., Lin, Y.-C., Wang, T., & Mao, H.-J.<sup>*</sup> (2019). Pollution characteristics and emission factors of VOCs from vehicle emissions in the tianjin tunnel. Huanjing Kexue/Environmental Science, 40(1), 104–113. <https://doi.org/10.13227/j.hjkx.201804187>
 
-## 2018
+# 2018
 
 **Song, C.**, Ma, C., Zhang, Y., Wang, T., Wu, L.<sup>*</sup>, Wang, P., Liu, Y., Li, Q., Zhang, J., Dai, Q., Zou, C., Sun, L., & Mao, H.<sup>*</sup> (2018). <span style="color:red;">Heavy-duty diesel vehicles dominate vehicle emissions in a tunnel study in northern China</span>. Science of the Total Environment, 637-638, 431–442. <https://doi.org/10.1016/j.scitotenv.2018.04.387> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0048969718315766-main.pdf)]**
 
@@ -82,7 +85,7 @@ Dai, Q., Bi, X.<sup>*</sup>, Liu, B., Li, L., Ding, J., Song, W., Bi, S., Schulz
 
 Wang, A.-X., Chen, X., **Song, C.**, Ying, S.-M., Li, Q., Wu, L., & Mao, H.-J.<sup>*</sup> (2018). Association between fine particulate matter and asthma hospital outpatient visits in Hangzhou. Huanjing Kexue/Environmental Science, 39(10), 4457–4462. <https://doi.org/10.13227/j.hjkx.201712090>
 
-## 2017
+# 2017
 
 **Song, C.**, He, J.<sup>*</sup>, Wu, L., Jin, T., Chen, X., Li, R., Ren, P., Zhang, L., & Mao, H.<sup>*</sup> (2017). <span style="color:red;">Health burden attributable to ambient PM2.5 in China</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Environmental Pollution, 223, 575–586. <https://doi.org/10.1016/j.envpol.2017.01.060> **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749116317882-main.pdf)]**
 
