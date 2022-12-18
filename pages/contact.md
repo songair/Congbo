@@ -17,7 +17,7 @@ class="underline"
     style="width: 1em; margin-inline-start: 0.5em"
     alt="ORCID iD icon"/>
   https://orcid.org/0000-0001-7948-4834
-</a>
+</a><br />
 <img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100">
 <br clear="left"/>
 
