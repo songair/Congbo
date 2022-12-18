@@ -6,7 +6,7 @@ title: Contact
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 ## Name: Congbo Song / 宋从波, Pronouns: he/him
-<img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100">
+<img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100" alt="Congbo Song">
 <br clear="left"/>
 
 ## Address
