@@ -5,6 +5,19 @@ title: Contact
 
 
 ## Name: Congbo Song / 宋从波, Pronouns: he/him
+<a
+id="cy-effective-orcid-url"
+class="underline"
+ href="https://orcid.org/0000-0001-7948-4834"
+ target="orcid.widget"
+ rel="me noopener noreferrer"
+ style="vertical-align: top">
+ <img
+    src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+    style="width: 1em; margin-inline-start: 0.5em"
+    alt="ORCID iD icon"/>
+  https://orcid.org/0000-0001-7948-4834
+</a>
 <img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100">
 <br clear="left"/>
 
