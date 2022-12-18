@@ -4,14 +4,14 @@ title: Contact
 ---
 
 
-## Name: Congbo Song / 宋从波, Pronouns: he/him 
+## Name: Congbo Song / 宋从波, Pronouns: he/him
 <img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100">
 
 <br clear="left"/>
 
 ## Address
 
-Room 2.03 | Simon building | University of Manchester| Oxford Road | Manchester, M13 9PL | United Kingdom
+Room 2.03, Simon building, University of Manchester, Oxford Road, Manchester M13 9PL, United Kingdom
 
 ## Email
 
