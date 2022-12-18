@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects | Congbo Song | The University of Manchester</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="author" content="Congbo Song" />
+  <meta name="description" content="Congbo Song, NCAS, the University of Manchester"/>
+  <meta name="keywords" content="Congbo Song, CongboSong, SongCongbo, Song Congbo, 宋从波, Congbo, Birmingham, Manchester, University of Birmingham, University of Manchester, NCAS, Air pollution, Air quality, Clean air, Machine learning"/>
+  <link rel="icon" href="/static/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/static/img/logo.png" />
+  <link rel="stylesheet" href="/static/css/common.css?t=20221218135422">
+  <link rel="stylesheet" href="/static/css/theme-dark.css?t=20221218135422">
+  <link rel="stylesheet" href="/static/css/post.css?t=20221218135422">
+  <link rel="stylesheet" href="/static/css/code-dark.css?t=20221218135422">
+  <link rel="stylesheet" href="/static/css/code-light.css?t=20221218135422">
+  <link rel="prefetch" href="/static/xml/search.xml?t=20221218135422">
+  <link rel="prefetch" href="/static/js/search.js?t=20221218135422">
+  <script>
+    window.blog = {
+      baseurl:"",
+      buildAt:"20221218135422",
+      darkTheme: false,
+      setDarkTheme: function (dark) {
+        this.darkTheme = Boolean(dark);
+        document.documentElement.className = this.darkTheme ? 'dark': '';
+        document.querySelector('meta[name=theme-color]').setAttribute('content', this.darkTheme ? '#2D2E32': '#FFFFFF');
+      }
+    }
+    if (sessionStorage.darkTheme !== undefined) {
+      blog.setDarkTheme(sessionStorage.darkTheme === 'true'); // 记忆值，单个窗口内有效
+    } else {
+      blog.setDarkTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); // 跟随系统
+    }
+    if (window.matchMedia) {
+      var media = window.matchMedia('(prefers-color-scheme: dark)');
+      media.addListener(function (ev) {
+        blog.setDarkTheme(ev.currentTarget.matches);
+        sessionStorage.removeItem('darkTheme');
+      });
+    }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  
+</head>
+<body ondragstart="return false;">
+<header class="header">
+  <img class="logo" src="/static/img/logo.jpg" alt="logo"/>
+  <nav class="menu">
+    <a href="/"  class="hover-underline">About</a>
+    <a href="/pages/post.html"  class="hover-underline">Blog</a>
+    <a href="/pages/tags.html"  class="hover-underline">Tags</a>
+    <a href="/pages/search.html"  class="hover-underline">Search</a>
+    <a href="/pages/projects.html"  class="hover-underline">Projects</a>
+    <a href="/pages/papers.html"  class="hover-underline">Papers</a>
+    <a href="/pages/cv.html"  class="hover-underline">CV</a>
+    <a href="/pages/contact.html"  class="hover-underline">Contact</a>
+    </nav>
+</header>
+<div class="page page-post" data-spy="scroll" data-target=".toc" data-offset="20">
+  <h1 class="title" id="Projects">Projects</h1>
+  
+  
+  <div class="post">
+    <hr />
+
+<h2 id="xxx">XXX</h2>
+
+<hr />
+
+<h2 id="xxx-1">XXX</h2>
+
+<hr />
+
+<!--
+* Stereo Correpsondence based on [Pyramid Stereo Matching Network](https://github.com/JiaRenChang/PSMNet)
+* Ground Truth Cleaning (RGB and Depth alignment) based on Iterative Closest Point
+* Ranked 4th in 2019 MICCAI [SCARED Challenge](https://endovissub2019-scared.grand-challenge.org/)
+* [More information about the method](http://longqian.me/2019/12/13/3d-reconstrcution-for-endoscopic-video/)
+
+
+<div style="width: 100%; text-align: right;">
+	<video width="100%" height="100%" align="right" src="/public/video/project_scared.mp4" type="video/mp4" autoplay loop muted></video>
+</div>
+-->
+<hr />
+<!--
+## Real-Time Telepresence
+
+* Using Azure Kinect and Microsoft HoloLens 2
+* Audience Award (best project award) for Medical Augmented Reality Summer School 2019
+* More information: [Teleporting the Expert Surgeon into Your OR](http://longqian.me/2019/08/29/teleporting-the-expert-into-your-operating-room/)
+
+
+<div style="width: 100%; text-align:right;">
+	<video width="100%" height="100%" align="right" src="/public/video/project_marss.mp4" type="video/mp4" autoplay loop muted></video>
+</div>
+
+
+_________________
+
+## ARAMIS
+
+* Augmented Realiy Assistance for Minimally-Invasive Surgery
+* CUDA-accelerated Semi-Global Block Matching algorithm
+* Real-time streaming and visualization on HoloLens
+* [Paper](https://link.springer.com/chapter/10.1007/978-3-030-32254-0_9) accepted for oral presentation at MICCAI 2019
+
+
+<div style="width: 100%; text-align: right;">
+	<video width="100%" height="100%" align="right" src="/public/video/project_aramis.mp4" type="video/mp4" autoplay loop muted></video>
+</div>
+
+_________________
+
+## Restoring the Lost Awareness Caused by HMD Occlusion
+
+* Current OST-HMDs occlude part of user's peripheral vision
+* We use screen edge or LED indicators to restore the loss awareness
+* [Paper](https://ieeexplore.ieee.org/document/8456571) accepted for ISMAR 2018 and IEEE TVCG
+
+
+<div style="width: 100%; text-align: right;">
+	<video width="100%" height="100%" align="right" src="/public/video/project_awareness.mp4" type="video/mp4" autoplay loop muted></video>
+</div>
+
+_________________
+
+## ARssist
+
+* [ARssist - Augmented Reality in Robotic Surgery](http://longqian.me/2019/04/09/arssist-augmented-reality-in-robotic-surgery/)
+* Precise overlay of robotic instrument and endoscope FOV indicator
+
+
+<div style="width: 100%; text-align: right;">
+	<video width="100%" height="100%" align="right" src="/public/video/project_arssist.mp4" type="video/mp4" autoplay loop muted></video>
+</div>
+
+
+_________________
+
+## dVRK Mixed Reality Extension
+
+* [The Rationale behind dVRK-XR](http://longqian.me/2019/06/21/dvrk-xr/)
+* Enable mixed reality research for da Vinci Research Kit
+
+
+<div style="width: 100%; text-align: right;">
+	<video width="100%" height="100%" align="right" src="/public/video/project_dvrkxr.mp4" type="video/mp4" autoplay loop muted></video>
+</div>
+
+
+_________________
+
+
+## Display Calibration for Optical HMDs
+
+* 3D-3D registration between the real world space and virtual space
+
+<p class="full-width-clear">
+<img src="/public/image/project_calib3d.png" width="100%" align="right"/>
+</p>
+
+
+_________________
+
+
+## ARToolKit for HoloLens
+
+* Open source [repo](https://github.com/qian256/HoloLensARToolKit)
+* Native wrapper for ARToolKit library for UWP
+* Performance optimization for HoloLens
+* [More information about ARToolKit on HoloLens](http://longqian.me/2017/01/20/artoolkit-on-hololens/)
+
+<p class="full-width-clear">
+<img src="/public/image/artoolkit-hololens-minion-thumb.png" width="60%" align="right"/>
+</p>
+
+
+_________________
+
+
+## Augmented Reality for Combat Medics Training
+
+
+
+_________________
+
+
+## An Ethernet-to-FireWire Bridge
+
+* To ease the low-level communication for [da Vinci Research Kit](http://www.intuitive-foundation.org/dvrk/)
+
+<p class="full-width-clear">
+	<img src="/public/image/bridge.png" width="60%" align="right"/>
+</p>
+-->
+
+  </div>
+  
+</div>
+<script type="text/javascript" src="/static/js/blog.js?t=20221218135422"></script>
+<script type="text/javascript" src="/static/js/search.js?t=20221218135422"></script>
+
+<footer class="footer">
+  <span>© CC BY-NC-SA 4.0</span>
+  | <a href="/static/xml/rss.xml">RSS</a>
+  
+</footer>
+<div id="to-top">
+  <span></span>
+  <span></span>
+</div>
+</body>
+</html>

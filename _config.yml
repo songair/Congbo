@@ -36,6 +36,8 @@ menu:
     url: /pages/tags.html
   - title: Search
     url: /pages/search.html
+  - title: Projects
+    url: /pages/projects.html
   - title: Papers
     url: /pages/papers.html
   - title: CV
@@ -59,7 +61,7 @@ valine:
   id: xrRRo58nrl4YV9rUeNOePKr9-MdYXbMMI
   key: 90tIVi6XRevzSAzvojiOKwlR
   js: /static/js/Valine.min.js
-  placeholder: Comment here
+  placeholder: Get in touch here
   avatar: mp
   visitor: true
   master: b8d6b6976b3ec45bccc6aa9816c40db7
