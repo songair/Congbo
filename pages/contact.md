@@ -6,19 +6,15 @@ title: Contact
 
 ## Name: Congbo Song / 宋从波, Pronouns: he/him
 <img align="left" src="{{site.baseurl}}/static/img/bio.jpg" width="100" height="100">
-
 <br clear="left"/>
 
 ## Address
-
 Room 2.03, Simon building, University of Manchester, Oxford Road, Manchester M13 9PL, United Kingdom
 
 ## Email
-
 <congbo.song@manchester.ac.uk>
 
 ## Website
-
 [Google Scholar](https://scholar.google.com/citations?user=JcL-uzcAAAAJ&hl=en);   [ResearchGate](https://www.researchgate.net/profile/Congbo-Song);  [ORCID](https://orcid.org/0000-0001-7948-4834);  [ResearcherID](https://publons.com/researcher/3024756/congbo-song/); [Scopus ID](https://www.scopus.com/authid/detail.uri?authorId=57192012559);<br />
 University profile page:[https://research.manchester.ac.uk/en/persons/congbo-song](https://research.manchester.ac.uk/en/persons/congbo-song)
 
