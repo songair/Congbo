@@ -20,6 +20,7 @@ exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.
 domainUrl: 'https://congbo.site'
 baseurl: ''
 sourcecode:
+emailcode: "congbo.song@manchester.ac.uk"
 # 吐个槽地址，会在chat页面中重定向到该地址
 #tucaoUrl:
 
