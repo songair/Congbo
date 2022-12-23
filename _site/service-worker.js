@@ -1,4 +1,4 @@
-let version = "20221223023723"
+let version = "20221223024312"
 let baseUrl = ''
 
 // let version = '001'
