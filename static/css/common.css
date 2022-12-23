@@ -130,12 +130,18 @@ input:-webkit-autofill {
 .footer {
   padding: 15px 0;
   font-size: 14px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
 }
 .footer a {
   text-decoration: underline;
   color: #000000;
   padding: 0 4px;
   white-space: nowrap;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
 }
 #to-top {
   position: fixed;
@@ -191,7 +197,8 @@ input:-webkit-autofill {
   @page {size: A3; margin-right: 1.9cm; margin-top: 1.9cm; margin-bottom: 1.9cm;}
   @page :left {margin-left: 9cm;}
   @page :right {margin-left: 9cm;}
-  header, head, footer, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower, .vempty
+  /* footer, */
+  header, head, logo, aside, nav, form, iframe, .menu, .header, .hero, .adslot, .vpanel, .vpower, .vempty
  { display:none;}
   #leftbar{ display:none;}
   /* print.css */
@@ -199,5 +206,3 @@ input:-webkit-autofill {
   #contentarea{ width:100%;}
   img.dark {filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);}
 }
-
-
