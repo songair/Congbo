@@ -133,9 +133,11 @@ input:-webkit-autofill {
   vertical-align: middle;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 .footer a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #000000;
   padding: 0 4px;
   white-space: nowrap;
