@@ -20,7 +20,9 @@ Update: 2022/12/15
 | <span id="badgeCont131"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont131&rid=AAE-8183-2019&size=small"></script></span> |
 -->
 
+# 2023
 
+Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Identify the contribution of vehicle non-exhaust emissions: a single particle aerosol mass spectrometer test case at typical road environment. Front. Environ. Sci. Eng. 17(5): 62. <https://doi.org/10.1007/s11783-023-1662-8> **[[pdf]({{site.baseurl}}/static/papers/spamsnonexhaust.pdf)]**
 
 # 2022
 
