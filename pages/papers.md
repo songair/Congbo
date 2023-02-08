@@ -3,13 +3,13 @@ layout: mypost
 title: Publications
 ---
 
-Update: 2022/12/15
+Update: 2023/02/08
 
 # Working papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
 
 **Song, C.**<sup>*</sup>, Zhang, J., Tong, H., Xu, J., Shi, Z., Coe, H., and Mao, H.<sup>*</sup> (2022). Two-step Machine Learning Reveals Near-road Polycyclic Aromatic Hydrocarbons (PAHs) in Individual Particles from Biomass Burning, Coal Combustion and Vehicle Emissions. (In preparation)
 
-**Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2022). Attribution of air quality benefits to clean winter heating polices in China using a machine learning and causal inference approach. Environmental Science & Technology. (Submitted)
+
 
 
 # Published papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
@@ -21,6 +21,7 @@ Update: 2022/12/15
 -->
 
 # 2023
+**Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2023). Attribution of air quality benefits to clean winter heating polices in China using a machine learning and causal inference approach. Environmental Science & Technology. ASAP. <https://doi.org/10.1021/acs.est.2c06800>{:target="_blank"}
 
 Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Identify the contribution of vehicle non-exhaust emissions: a single particle aerosol mass spectrometer test case at typical road environment. Front. Environ. Sci. Eng. 17(5): 62. <https://doi.org/10.1007/s11783-023-1662-8>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/spamsnonexhaust.pdf)]**
 
@@ -29,7 +30,7 @@ Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Ide
 Brean, J., Beddows, D., Harrison, R., **Song, C.**, Tunved, P., Ström, I., Krejci., Radovan, Freud, E., Massling, Andreas., Skov H., Asmi E., Lupi, A., Dall’Osto, M. (2022). Collective geographical eco-regions and precursor sources driving Arctic new particle formation. Atmospheric Chemistry and Physics. <https://acp.copernicus.org/preprints/acp-2022-280/>{:target="_blank"} (Accepted)
 
 **Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>. (2022). <span style="color:red;">Understanding Sources and Drivers of Size-Resolved Aerosol in the High Arctic Islands of Svalbard Using a Receptor Model Coupled with Machine Learning</span>.
-Environmental Science & Technology, 56 (16), 11189-11198. <https://pubs.acs.org/doi/10.1021/acs.est.1c07796>{:target="_blank"}**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
+Environmental Science & Technology, 56 (16), 11189-11198. <https://doi.org/10.1021/acs.est.1c07796>{:target="_blank"}**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
 
 Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters, 9 (2), 112-119.  <https://doi.org/10.1021/acs.estlett.1c00865>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf)]**
 
