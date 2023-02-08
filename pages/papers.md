@@ -23,26 +23,26 @@ Update: 2023/02/08
 # 2023
 **Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2023). Attribution of Air Quality Benefits to Clean Winter Heating Polices in China: Combining Machine Learning with Causal Inference. Environmental Science & Technology. ASAP. <https://doi.org/10.1021/acs.est.2c06800>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.est.2c06800.pdf){:target="_blank"}]**
 
-Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Identify the contribution of vehicle non-exhaust emissions: a single particle aerosol mass spectrometer test case at typical road environment. Front. Environ. Sci. Eng. 17(5): 62. <https://doi.org/10.1007/s11783-023-1662-8>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/spamsnonexhaust.pdf)]**
+Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Identify the contribution of vehicle non-exhaust emissions: a single particle aerosol mass spectrometer test case at typical road environment. Front. Environ. Sci. Eng. 17(5): 62. <https://doi.org/10.1007/s11783-023-1662-8>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/spamsnonexhaust.pdf){:target="_blank"}]**
 
 # 2022
 
 Brean, J., Beddows, D., Harrison, R., **Song, C.**, Tunved, P., Ström, I., Krejci., Radovan, Freud, E., Massling, Andreas., Skov H., Asmi E., Lupi, A., Dall’Osto, M. (2022). Collective geographical eco-regions and precursor sources driving Arctic new particle formation. Atmospheric Chemistry and Physics. <https://acp.copernicus.org/preprints/acp-2022-280/>{:target="_blank"} (Accepted)
 
 **Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>. (2022). <span style="color:red;">Understanding Sources and Drivers of Size-Resolved Aerosol in the High Arctic Islands of Svalbard Using a Receptor Model Coupled with Machine Learning</span>.
-Environmental Science & Technology, 56 (16), 11189-11198. <https://doi.org/10.1021/acs.est.1c07796>{:target="_blank"}**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf)]**
+Environmental Science & Technology, 56 (16), 11189-11198. <https://doi.org/10.1021/acs.est.1c07796>{:target="_blank"}**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf){:target="_blank"}]**
 
-Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters, 9 (2), 112-119.  <https://doi.org/10.1021/acs.estlett.1c00865>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf)]**
+Hou, L., Dai, Q.<sup>*</sup>, **Song, C.**, Liu, B., Guo, F., Dai, T., Li, L., Liu, B., Bi, X., Zhang, Y. and Feng, Y. (2022). Revealing Drivers of Haze Pollution by Explainable Machine Learning. Environmental Science & Technology Letters, 9 (2), 112-119.  <https://doi.org/10.1021/acs.estlett.1c00865>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.estlett.1c00865.pdf){:target="_blank"}]**
 
-Xu, J.<sup>*</sup>, Harrison, R.M., **Song, C.**, Hou, S., Wei, L., Fu, P., Li, H., Li, W. and Shi, Z.<sup>*</sup> (2022). PM2.5-bound silicon-containing secondary organic aerosols (Si-SOA) in Beijing ambient air. Chemosphere, 288, p.132377. <https://doi.org/10.1016/j.chemosphere.2021.132377>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0045653521028496.pdf)]**
+Xu, J.<sup>*</sup>, Harrison, R.M., **Song, C.**, Hou, S., Wei, L., Fu, P., Li, H., Li, W. and Shi, Z.<sup>*</sup> (2022). PM2.5-bound silicon-containing secondary organic aerosols (Si-SOA) in Beijing ambient air. Chemosphere, 288, p.132377. <https://doi.org/10.1016/j.chemosphere.2021.132377>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0045653521028496.pdf){:target="_blank"}]**
 
-Singh, A.<sup>*</sup>, Bartington, S.E., **Song, C.**, Ghaffarpasand, O., Kraftl, M., Shi, Z., Pope, F.D., Stacey, B., Hall, J., Thomas, G.N. and Bloss, W.J. (2022). Impacts of emergency health protection measures upon air quality, traffic and public health: evidence from Oxford, UK. Environmental Pollution, 293, p.118584. <https://doi.org/10.1016/j.envpol.2021.118584>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749121021667-main.pdf)]**
+Singh, A.<sup>*</sup>, Bartington, S.E., **Song, C.**, Ghaffarpasand, O., Kraftl, M., Shi, Z., Pope, F.D., Stacey, B., Hall, J., Thomas, G.N. and Bloss, W.J. (2022). Impacts of emergency health protection measures upon air quality, traffic and public health: evidence from Oxford, UK. Environmental Pollution, 293, p.118584. <https://doi.org/10.1016/j.envpol.2021.118584>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749121021667-main.pdf){:target="_blank"}]**
 
 # 2021
 
-Shi, Z.<sup>#1,*</sup>, **Song, C.**<sup>#1,*</sup>, Liu, B., Lu, G., Xu, J., Van Vu, T., Elliott, R., Li, W., Bloss, W., & Harrison, R. (2021). <span style="color:red;">Abrupt but smaller than expected changes in surface air quality attributable to COVID-19 lockdowns</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Science Advances, 7(3). <https://doi.org/10.1126/sciadv.abd6696>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/sciadv.abd6696.pdf)]**
+Shi, Z.<sup>#1,*</sup>, **Song, C.**<sup>#1,*</sup>, Liu, B., Lu, G., Xu, J., Van Vu, T., Elliott, R., Li, W., Bloss, W., & Harrison, R. (2021). <span style="color:red;">Abrupt but smaller than expected changes in surface air quality attributable to COVID-19 lockdowns</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Science Advances, 7(3). <https://doi.org/10.1126/sciadv.abd6696>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/sciadv.abd6696.pdf){:target="_blank"}]**
 
-**Song, C.**, Dallosto, M.<sup>*</sup>, Lupi, A., Mazzola, M., Traversi, R., Becagli, S., Gilardoni, S., Vratolis, S., Yttri, K., Beddows, D., Schmale, J., Brean, J., Kramawĳaya, A., Harrison, R., & Shi, Z.<sup>*</sup> (2021). <span style="color:red;">Differentiation of coarse-mode anthropogenic, marine and dust particles in the high arctic islands of svalbard</span>. Atmospheric Chemistry and Physics, 21(14), 11317–11335. <https://doi.org/10.5194/acp-21-11317-2021>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acp-21-11317-2021.pdf)]**
+**Song, C.**, Dallosto, M.<sup>*</sup>, Lupi, A., Mazzola, M., Traversi, R., Becagli, S., Gilardoni, S., Vratolis, S., Yttri, K., Beddows, D., Schmale, J., Brean, J., Kramawĳaya, A., Harrison, R., & Shi, Z.<sup>*</sup> (2021). <span style="color:red;">Differentiation of coarse-mode anthropogenic, marine and dust particles in the high arctic islands of svalbard</span>. Atmospheric Chemistry and Physics, 21(14), 11317–11335. <https://doi.org/10.5194/acp-21-11317-2021>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acp-21-11317-2021.pdf){:target="_blank"}]**
 
 Dai, Q., Ding, J., Hou, L., Li, L., Cai, Z., Liu, B., **Song, C.**, Bi, X., Wu, J., Zhang, Y.<sup>*</sup> and Feng, Y. (2021). Haze episodes before and during the COVID-19 shutdown in Tianjin, China: Contribution of fireworks and residential burning. Environmental Pollution, 286, p.117252. <https://doi.org/10.1016/j.envpol.2021.117252>{:target="_blank"}
 
@@ -56,7 +56,7 @@ Wang, Y., Liu, B.<sup>*</sup>, Zhang, Y., Dai, Q., **Song, C.**, Duan, L., Guo, 
 
 # 2020
 
-**Song, C.**, Liu, Y., Sun, L., Zhang, Q., & Mao, H.<sup>*</sup> (2020). <span style="color:red;">Emissions of volatile organic compounds (VOCs) from gasoline- and liquified natural gas (LNG)-fueled vehicles in tunnel studies</span>. Atmospheric Environment, 234. <https://doi.org/10.1016/j.atmosenv.2020.117626>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S1352231020303599-main.pdf)]**
+**Song, C.**, Liu, Y., Sun, L., Zhang, Q., & Mao, H.<sup>*</sup> (2020). <span style="color:red;">Emissions of volatile organic compounds (VOCs) from gasoline- and liquified natural gas (LNG)-fueled vehicles in tunnel studies</span>. Atmospheric Environment, 234. <https://doi.org/10.1016/j.atmosenv.2020.117626>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S1352231020303599-main.pdf){:target="_blank"}]**
 
 Gu, Y., Liu, B.<sup>*</sup>, Li, Y., Zhang, Y., Bi, X., Wu, J., **Song, C.**, Dai, Q., Han, Y., Ren, G., & Feng, Y. (2020). Multi-scale volatile organic compound (VOC) source apportionment in tianjin, China, using a receptor model coupled with 1-hr resolution data. Environmental Pollution, 265. <https://doi.org/10.1016/j.envpol.2020.115023>{:target="_blank"}
 
@@ -72,7 +72,7 @@ Zhang, J., Peng, J., **Song, C.**, Ma, C., Men, Z., Wu, J., Wu, L., Wang, T., Zh
 
 # 2019
 
-**Song, C.**, Liu, B., Dai, Q., Li, H., & Mao, H.<sup>*</sup> (2019). <span style="color:red;">Temperature dependence and source apportionment of volatile organic compounds (VOCs) at an urban site on the north China plain</span>. Atmospheric Environment, 207, 167–181. <https://doi.org/10.1016/j.atmosenv.2019.03.030>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S1352231019302018-main.pdf)]**[<span style="color:blue;">[One of the most cited articles from Atmospheric Environment published since 2020]</span>](https://www.journals.elsevier.com/atmospheric-environment/most-cited-articles){:target="_blank"}
+**Song, C.**, Liu, B., Dai, Q., Li, H., & Mao, H.<sup>*</sup> (2019). <span style="color:red;">Temperature dependence and source apportionment of volatile organic compounds (VOCs) at an urban site on the north China plain</span>. Atmospheric Environment, 207, 167–181. <https://doi.org/10.1016/j.atmosenv.2019.03.030>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S1352231019302018-main.pdf){:target="_blank"}]**[<span style="color:blue;">[One of the most cited articles from Atmospheric Environment published since 2020]</span>](https://www.journals.elsevier.com/atmospheric-environment/most-cited-articles){:target="_blank"}
 
 Dai, Q., Bi, X.<sup>*</sup>, Huangfu, Y., Yang, J., Li, T., Khan, J., **Song, C.**, Xu, J., Wu, J., Zhang, Y., & Feng, Y. (2019). A size-resolved chemical mass balance (sr-cmb) approach for source apportionment of ambient particulate matter by single element analysis. Atmospheric Environment, 197, 45–52. <https://doi.org/10.1016/j.atmosenv.2018.10.026>{:target="_blank"}
 
@@ -82,7 +82,7 @@ Sun, L.-N., Liu, Y., Zhao, J.-B., Sun, S.-D., **Song, C.**, Zhang, J., Li, Y.-N.
 
 # 2018
 
-**Song, C.**, Ma, C., Zhang, Y., Wang, T., Wu, L.<sup>*</sup>, Wang, P., Liu, Y., Li, Q., Zhang, J., Dai, Q., Zou, C., Sun, L., & Mao, H.<sup>*</sup> (2018). <span style="color:red;">Heavy-duty diesel vehicles dominate vehicle emissions in a tunnel study in northern China</span>. Science of the Total Environment, 637-638, 431–442. <https://doi.org/10.1016/j.scitotenv.2018.04.387>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0048969718315766-main.pdf)]**
+**Song, C.**, Ma, C., Zhang, Y., Wang, T., Wu, L.<sup>*</sup>, Wang, P., Liu, Y., Li, Q., Zhang, J., Dai, Q., Zou, C., Sun, L., & Mao, H.<sup>*</sup> (2018). <span style="color:red;">Heavy-duty diesel vehicles dominate vehicle emissions in a tunnel study in northern China</span>. Science of the Total Environment, 637-638, 431–442. <https://doi.org/10.1016/j.scitotenv.2018.04.387>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0048969718315766-main.pdf){:target="_blank"}]**
 
 Dai, Q., Bi, X.<sup>*</sup>, Liu, B., Li, L., Ding, J., Song, W., Bi, S., Schulze, B., **Song, C.**, Wu, J., Zhang, Y., Feng, Y., & Hopke, P. (2018). Chemical nature of PM2.5 and PM10 in Xi’an, China: Insights into primary emissions and secondary particle formation. Environmental Pollution, 240, 155–166. <https://doi.org/10.1016/j.envpol.2018.04.111>{:target="_blank"}
 
@@ -90,9 +90,9 @@ Wang, A.-X., Chen, X., **Song, C.**, Ying, S.-M., Li, Q., Wu, L., & Mao, H.-J.<s
 
 # 2017
 
-**Song, C.**, He, J.<sup>*</sup>, Wu, L., Jin, T., Chen, X., Li, R., Ren, P., Zhang, L., & Mao, H.<sup>*</sup> (2017). <span style="color:red;">Health burden attributable to ambient PM2.5 in China</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Environmental Pollution, 223, 575–586. <https://doi.org/10.1016/j.envpol.2017.01.060>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749116317882-main.pdf)]**
+**Song, C.**, He, J.<sup>*</sup>, Wu, L., Jin, T., Chen, X., Li, R., Ren, P., Zhang, L., & Mao, H.<sup>*</sup> (2017). <span style="color:red;">Health burden attributable to ambient PM2.5 in China</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Environmental Pollution, 223, 575–586. <https://doi.org/10.1016/j.envpol.2017.01.060>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749116317882-main.pdf){:target="_blank"}]**
 
-**Song, C.**, Wu, L., Xie, Y., He, J., Chen, X., Wang, T., Lin, Y., Jin, T., Wang, A., Liu, Y., Dai, Q., Liu, B., Wang, Y.-N., & Mao, H.<sup>*</sup> (2017). <span style="color:red;">Air pollution in China: status and spatiotemporal variations</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Environmental Pollution, 227, 334–347. <https://doi.org/10.1016/j.envpol.2017.04.075>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749116322850-main.pdf)]**
+**Song, C.**, Wu, L., Xie, Y., He, J., Chen, X., Wang, T., Lin, Y., Jin, T., Wang, A., Liu, Y., Dai, Q., Liu, B., Wang, Y.-N., & Mao, H.<sup>*</sup> (2017). <span style="color:red;">Air pollution in China: status and spatiotemporal variations</span> [<span style="color:blue;">ESI Highly Cited Paper</span>]. Environmental Pollution, 227, 334–347. <https://doi.org/10.1016/j.envpol.2017.04.075>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/1-s2.0-S0269749116322850-main.pdf){:target="_blank"}]**
 
 Fang, X.-Z., Wu, L., Zhang, J., Li, H.-R., Mao, H.-J.<sup>*</sup>, & **Song, C.** (2017). Characteristics of particulate matter and carbonaceous species in ambient air at different air quality levels. Huanjing Kexue/Environmental Science, 38(9), 3569–3574. <https://doi.org/10.13227/j.hjkx.201702090>{:target="_blank"}
 
