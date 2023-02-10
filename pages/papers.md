@@ -21,7 +21,7 @@ Update: 2023/02/08
 -->
 
 # 2023
-**Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2023). Attribution of Air Quality Benefits to Clean Winter Heating Polices in China: Combining Machine Learning with Causal Inference. Environmental Science & Technology. ASAP. <https://doi.org/10.1021/acs.est.2c06800>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.est.2c06800.pdf){:target="_blank"}]**
+**Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2023). <span style="color:red;">Attribution of Air Quality Benefits to Clean Winter Heating Polices in China: Combining Machine Learning with Causal Inference</span>. Environmental Science & Technology. ASAP. <https://doi.org/10.1021/acs.est.2c06800>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.est.2c06800.pdf){:target="_blank"}]**
 
 Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Identify the contribution of vehicle non-exhaust emissions: a single particle aerosol mass spectrometer test case at typical road environment. Front. Environ. Sci. Eng. 17(5): 62. <https://doi.org/10.1007/s11783-023-1662-8>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/spamsnonexhaust.pdf){:target="_blank"}]**
 
