@@ -4,6 +4,7 @@ title: Publications
 ---
 
 Update: 2023/02/08
+Full list see **[Google Scholar](https://scholar.google.com/citations?hl=en&user=JcL-uzcAAAAJ&view_op=list_works&sortby=pubdate){:target="_blank"}]**.
 
 # Working papers (<sup>#</sup> co-first author, <sup>*</sup> corresponding author)
 
