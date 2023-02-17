@@ -23,11 +23,14 @@ Update: 2023/02/08
 # 2023
 **Song, C.**, Liu, B., Cheng K., Cole, M., Dai, Q.<sup>*</sup>, Elliott, R., Shi, Z.<sup>*</sup> (2023). <span style="color:red;">Attribution of Air Quality Benefits to Clean Winter Heating Polices in China: Combining Machine Learning with Causal Inference</span>. Environmental Science & Technology. ASAP. <https://doi.org/10.1021/acs.est.2c06800>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/acs.est.2c06800.pdf){:target="_blank"}]**
 
+
+Brean, J., Beddows, D. C. S., Harrison, R. M., **Song, C.**, Tunved, P., Ström, J., Krejci, R., Freud, E., Massling, A., Skov, H., Asmi, E., Lupi, A., and Dall'Osto, M.: Collective geographical ecoregions and precursor sources driving Arctic new particle formation, Atmos. Chem. Phys., 23, 2183–2198, <https://doi.org/10.5194/acp-23-2183-2023>{:target="_blank"}, 2023.
+
 Zhang, Q., Liu, J., Wei, N., **Song, C.**, Peng, J., Wu, L., Mao, H. (2023). Identify the contribution of vehicle non-exhaust emissions: a single particle aerosol mass spectrometer test case at typical road environment. Front. Environ. Sci. Eng. 17(5): 62. <https://doi.org/10.1007/s11783-023-1662-8>{:target="_blank"} **[[pdf]({{site.baseurl}}/static/papers/spamsnonexhaust.pdf){:target="_blank"}]**
 
 # 2022
 
-Brean, J., Beddows, D., Harrison, R., **Song, C.**, Tunved, P., Ström, I., Krejci., Radovan, Freud, E., Massling, Andreas., Skov H., Asmi E., Lupi, A., Dall’Osto, M. (2022). Collective geographical eco-regions and precursor sources driving Arctic new particle formation. Atmospheric Chemistry and Physics. <https://acp.copernicus.org/preprints/acp-2022-280/>{:target="_blank"} (Accepted)
+
 
 **Song, C.**<sup>*</sup>, Becagli, S., Beddows, D., Brean, j., Browse, J., Dai, Q., Dall’Osto, M., Ferracci, V., Harrison, R., Harris, N., Li, W., Jones, A., Kirchgäßner, A., Kramawijaya, A., Kurganskiy, A., Lupi, A., Mazzola M., Severi, M., Traversi, R., and Shi, S.<sup>*</sup>. (2022). <span style="color:red;">Understanding Sources and Drivers of Size-Resolved Aerosol in the High Arctic Islands of Svalbard Using a Receptor Model Coupled with Machine Learning</span>.
 Environmental Science & Technology, 56 (16), 11189-11198. <https://doi.org/10.1021/acs.est.1c07796>{:target="_blank"}**[[pdf]({{site.baseurl}}/static/papers/acs.est.1c07796.pdf){:target="_blank"}]**
